@@ -6,14 +6,9 @@ Code and data for:
 > *Vitamin N: Benefits of Different Forms of Public Greenery for Urban Health.*
 > [arXiv:2508.12998](https://arxiv.org/abs/2508.12998)
 
-The paper links greenery in London to NHS prescribing in 2016, for 632 wards and 4,835 LSOAs. It proposes
-two kinds of public greenery, **on-road** (greenery seen along streets) and **off-road** (public parks and gardens),
-and compares them with four official measures (NDVI, WHO, ESA WHO, Natural England). Outcomes are the yearly
-quantity of drugs per registered patient for diabetes, hypertension, asthma and opioids, and all prescribing.
+The paper links greenery in London to NHS prescribing in 2016, for 632 wards and 4,835 LSOAs. It proposes two kinds of public greenery, **on-road** (greenery seen along streets) and **off-road** (public parks and gardens), and compares them with four official measures (NDVI, WHO, ESA WHO, Natural England). Outcomes are the yearly quantity of drugs per registered patient for diabetes, hypertension, asthma and opioids, and all prescribing.
 
-**[results/results.html](results/results.html)** is an interactive summary of all results (download it and open
-it in a browser): the measures, the main models for wards and LSOAs, the cost estimate, the check against
-diagnoses, and maps.
+**[results/results.html](results/results.html)** is an interactive summary of all results (download it and open it in a browser): the measures, the main models for wards and LSOAs, the cost estimate, the check against diagnoses, and maps.
 
 ## Layout
 
@@ -40,8 +35,7 @@ results/
   results.html      interactive summary
 ```
 
-The logic of a step is in its `*_workers.py` file; the notebook with the same number runs it. Every script and notebook
-starts with its inputs, outputs and running time.
+The logic of a step is in its `*_workers.py` file; the notebook with the same number runs it. Every script and notebook starts with its inputs, outputs and running time.
 
 ## Reproducing the results
 

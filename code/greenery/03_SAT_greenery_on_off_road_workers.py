@@ -1,4 +1,4 @@
-"""Satellite on-road / off-road green per LSOA and ward (Methods), per NDVI tile.
+"""Satellite on-road / off-road green per LSOA and ward, per NDVI tile.
 
 on-road = green ∩ union of road buffers (04); accessible off-road = (green − buffers) ∩ public
 parks/gardens; inaccessible = total (03) − on-road − accessible.  Shares divide by road-strip
