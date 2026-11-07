@@ -1,0 +1,4 @@
+condition,target,measure,n_chemicals,pearson,spearman
+depression,QOF new diagnoses 2016-17,items / patient,31,0.059,0.085
+depression,QOF new diagnoses 2016-17,qty / patient,31,0.154,0.198
+depression,QOF new diagnoses 2016-17,adq / patient,31,0.195,0.211

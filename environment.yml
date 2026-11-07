@@ -1,0 +1,19 @@
+# conda env create -f environment.yml && conda activate vitamin_n
+name: vitamin_n
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy>=1.26,<2
+  - pandas>=2.2,<2.3
+  - scipy
+  - geopandas=1.1
+  - shapely=2.1
+  - pyproj=3.7
+  - joblib
+  - matplotlib
+  - statsmodels
+  - scikit-learn>=1.4
+  - mgwr
+  - jupyter
+  - ipykernel

@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vitamin N Results</title>
+<style>
+:root {
+  color-scheme: light;
+  --page: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e; --muted: #898781;
+  --grid: #e1e0d9; --axis: #c3c2b7; --ring: rgba(11,11,11,0.10);
+  --rpos: #6b4fcf; --rneg: #c4831b;
+  --neg: #4166b5; --pos: #c4453f; --mid: #f0efec;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+    --grid: #2c2c2a; --axis: #383835; --ring: rgba(255,255,255,0.10);
+    --rpos: #9580ea; --rneg: #d69a3a;
+    --neg: #6f8fd6; --pos: #e07b74; --mid: #383835;
+   
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+  --grid: #2c2c2a; --axis: #383835; --ring: rgba(255,255,255,0.10);
+  --rpos: #9580ea; --rneg: #d69a3a;
+  --neg: #6f8fd6; --pos: #e07b74; --mid: #383835;
+ 
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--page); color: var(--ink); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 1080px; margin: 0 auto; padding: 32px 16px 80px; }
+header.hero { padding: 8px 0 20px; border-bottom: 1px solid var(--grid); }
+.eyebrow { color: var(--ink-2); font-size: 14px; }
+h1 { font-size: clamp(26px, 5vw, 36px); line-height: 1.15; margin: 6px 0 10px; letter-spacing: -0.01em; }
+h2 { font-size: 22px; margin: 44px 0 8px; }
+h3 { font-size: 17px; margin: 22px 0 6px; }
+p { margin: 8px 0; max-width: 76ch; }
+.small, .note { font-size: 14px; color: var(--ink-2); }
+nav.toc { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 14px; margin-top: 10px; }
+nav.toc a { color: var(--ink-2); text-decoration: none; border-bottom: 1px solid var(--grid); }
+nav.toc a:hover { color: var(--ink); border-color: var(--ink-2); }
+.card { background: var(--surface); border: 1px solid var(--ring); border-radius: 12px; padding: 16px; margin: 14px 0; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--grid); vertical-align: top; }
+th { color: var(--ink-2); font-weight: 600; }
+td.grp { font-weight: 600; }
+table.corr { width: auto; }
+table.corr td.cell { text-align: center; min-width: 58px; font-variant-numeric: tabular-nums; border: 2px solid var(--surface); border-radius: 4px; font-size: 13px; }
+table.corr td.cell.dark { color: #fff; }
+table.corr th.col { text-align: center; font-size: 12px; font-weight: 500; max-width: 74px; vertical-align: bottom; }
+table.corr th.row { white-space: nowrap; font-weight: 500; }
+table.corr tr.split th, table.corr tr.split td { border-top: 2px solid var(--axis); }
+table.corr .vsplit { border-left: 2px solid var(--axis) !important; }
+table.corr td.diag { opacity: .45; }
+.corr-key { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--ink-2); margin-top: 8px; }
+.corr-key span.bar { width: 140px; height: 10px; border-radius: 4px; background: linear-gradient(90deg, var(--rneg), var(--surface), var(--rpos)); border: 1px solid var(--grid); }
+.scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.controls { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; margin: 0 0 12px; font-size: 14px; }
+select { font: inherit; font-size: 14px; color: var(--ink); background: var(--surface); border: 1px solid var(--axis); border-radius: 6px; padding: 4px 8px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; color: var(--ink-2); align-items: center; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+.sig-key { width: 18px; height: 14px; border-radius: 3px; border: 2.5px solid var(--ink); display: inline-block; background: var(--mid); }
+code { font-size: 13px; background: var(--mid); padding: 1px 5px; border-radius: 4px; }
+svg text { fill: var(--ink-2); font: 12px system-ui, -apple-system, "Segoe UI", sans-serif; }
+svg .lbl { fill: var(--ink); }
+svg .gr { stroke: var(--grid); }
+svg .ax { stroke: var(--axis); }
+svg .grp { fill: var(--ink); font-weight: 600; }
+svg .panel { fill: var(--ink); font-weight: 600; font-size: 13px; }
+#tip { position: fixed; pointer-events: none; z-index: 10; background: var(--surface); color: var(--ink); border: 1px solid var(--ring);
+       box-shadow: 0 4px 16px rgba(0,0,0,.12); border-radius: 8px; padding: 8px 10px; font-size: 13px; max-width: 300px; display: none; }
+table.sav td, table.sav th { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+table.sav td:first-child, table.sav th:first-child { text-align: left; }
+table.sav th.grp { text-align: center; color: var(--ink); border-bottom: 2px solid var(--axis); }
+table.sav td .it { display: block; font-size: 12px; color: var(--ink-2); }
+table.sav td.ns { opacity: .45; }
+table.sav tr.gsep td { border-top: 2px solid var(--axis); }
+.fig2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 16px; }
+.maps { display: grid; grid-template-columns: 1fr; gap: 14px; }
+.mapcard { background: var(--surface); border: 1px solid var(--ring); border-radius: 12px; padding: 14px; }
+.mapcard h3 { margin: 0 0 2px; font-size: 16px; }
+.mapcard .unit { font-size: 13px; color: var(--ink-2); margin-bottom: 6px; }
+.mappair { display: grid; grid-template-columns: 3fr 2fr; gap: 16px; align-items: end; }
+@media (max-width: 640px) { .mappair { grid-template-columns: 1fr; } }
+.mappair svg { width: 100%; height: auto; display: block; }
+.ramp { display: flex; margin-top: 6px; font-size: 11px; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.ramp div { flex: 1; } .ramp i { display: block; height: 8px; margin-right: 2px; }
+.ramp div:first-child i { border-radius: 3px 0 0 3px; } .ramp div:last-child i { border-radius: 0 3px 3px 0; }
+@media (max-width: 600px) { body { font-size: 15px; } }
+</style>
+</head>
+<body>
+<main>
+<header class="hero">
+  <div class="eyebrow">Urban greenery and NHS prescribing · London, 2016</div>
+  <h1>Vitamin N: results</h1>
+  <p class="small">Interactive summary of the results in <a href="https://arxiv.org/abs/2508.12998">Vitamin N (arXiv:2508.12998)</a>, built from the files in this repository by <code>code/paper/04_results_page.py</code>. Hover over any chart for exact values.</p>
+  <nav class="toc">
+    <a href="#measures">Measures and data</a><a href="#results">Main results</a><a href="#cost">Cost estimate</a>
+    <a href="#qof">Prescribing against diagnoses</a><a href="#relate">How the measures relate</a><a href="#maps">Maps and distributions</a>
+  </nav>
+</header>
+
+<section id="measures">
+<h2>Measures and data</h2>
+<p><strong>Greenery measures.</strong> Our on-road measures come in two versions: <em>unweighted</em> counts all roads equally; <em>weighted</em> weights each road by how central it is in the street network (space syntax choice, 800 m radius), so busier roads count more.</p>
+<div class="card scroll">
+<table>
+<thead><tr><th>Type</th><th>Measure</th><th>What it captures</th><th>Source</th></tr></thead>
+<tbody>
+<tr><td class="grp" rowspan="3">Our measures</td><td>On-road, aerial (unweighted, weighted)</td><td>Green share of a 10 m strip on each side of every road</td><td>London Green Cover (aerial images), OpenStreetMap roads, space syntax choice</td></tr>
+<tr><td>On-road, street view (unweighted, weighted)</td><td>Share of trees in street view images along roads</td><td>About 100,000 street view images, space syntax choice</td></tr>
+<tr><td>Off-road</td><td>Green inside public parks and gardens, outside the road strips, as a share of the area</td><td>London Green Cover, OpenStreetMap parks</td></tr>
+<tr><td class="grp" rowspan="2">Official measures</td><td>NDVI</td><td>All greenery seen from above, public and private, as a share of the area</td><td>London Green Cover</td></tr>
+<tr><td>WHO, ESA WHO, NE</td><td>Share of residents within reach of green space, by each target's distance rule</td><td>Battiston &amp; Schifanella (2024)</td></tr>
+</tbody></table>
+</div>
+<figure class="card" style="margin:14px 0">
+  <h3 style="margin-top:0">Distribution of the greenery measures across London wards (Figure 2)</h3>
+  <div class="fig2">
+    <div><div class="small" style="margin-bottom:4px">Greenery cover</div><div id="fig2L"></div></div>
+    <div><div class="small" style="margin-bottom:4px">Access targets</div><div id="fig2R"></div></div>
+  </div>
+  <p class="small" id="fig2Note"></p>
+</figure>
+<p><strong>Outcomes.</strong> NHS prescribing in 2016 for diabetes, hypertension, asthma and opioids, plus all prescribing, each as yearly quantity per registered patient. Prescriptions are shared out from GP practices to areas by where each practice's patients live.</p>
+<figure class="card" style="margin:14px 0">
+  <h3 style="margin-top:0">Yearly prescription quantity per patient across London wards (Figure 1)</h3>
+  <div class="fig2">
+    <div id="fig1"></div><div id="fig1t"></div>
+  </div>
+  <p class="small" id="fig1Note"></p>
+</figure>
+<p><strong>Areas and controls.</strong> 632 London wards and, as a check at a finer scale, 4,835 LSOAs. All models control for the share of White residents, median age, deprivation and building density.</p>
+<p><strong>Models.</strong> Propensity score matching (PSM; areas above vs below the median of a measure), double machine learning (DML; the measure kept continuous, effect per SD) and OLS (standardised coefficients).</p>
+</section>
+
+<section id="results">
+<h2>Main results</h2>
+<div class="card">
+  <div class="controls">
+    <label>Model <select id="model"></select></label>
+    <span class="legend"><span><i class="sw" style="background:var(--neg)"></i>fewer prescriptions</span><span><i class="sw" style="background:var(--pos)"></i>more prescriptions</span><span><i class="sig-key"></i>significant at 5 %</span></span>
+  </div>
+  <div class="scroll"><div id="matrix"></div></div>
+  <p class="note" id="matrixNote"></p>
+</div>
+</section>
+
+<section id="cost">
+<h2>Cost estimate</h2>
+<p>Weighted street view on-road greenery and diabetes prescribing. Change in a year's diabetes prescription items in London, and its cost at London's 2016 cost per item (<span id="cpi"></span>; NHSBSA English Prescribing Dataset). Negative values are fewer items and lower cost. These numbers hold only if the associations are causal and the same across the range of greenery: a first-order approximation, not a forecast.</p>
+<ul class="small" style="max-width:76ch">
+  <li><strong>DML, +1 SD:</strong> every area's greenery rises by one SD; its items change by the DML effect per SD.</li>
+  <li><strong>PSM, to median:</strong> areas below the median change by the PSM effect (above vs below the median), applied to their items.</li>
+</ul>
+<div class="card"><div class="scroll" id="costTable"></div></div>
+</section>
+
+<section id="qof">
+<h2>Prescribing against diagnoses</h2>
+<p>Do the prescribing outcomes track how many people are diagnosed? Pearson correlation across the 637 London wards between each outcome and the QOF disease registers of 2016/17 (SI Table S1). Diabetes and hypertension prescribing match diagnoses closely and asthma reasonably well; depression does not, which is why depression and anxiety are left out of the models.</p>
+<div class="card scroll" id="qofTable"></div>
+</section>
+
+<section id="relate">
+<h2>How the measures relate</h2>
+<div class="card"><div class="scroll" id="corr"></div></div>
+</section>
+
+<section id="maps">
+<h2>Maps and distributions</h2>
+<p class="small">Wards, 2016. Map colours split each measure into seven classes, each holding about a seventh of the wards; the histogram bars carry the same colours, and the dashed line marks the median. Grey: no value (the City of London, and Harefield in Hillingdon for the weighted street view measure). Hover over a ward for its value.</p>
+<h3>Prescribing</h3>
+<div class="maps" id="mapGridOut"></div>
+<h3 style="margin-top:28px">Greenery</h3>
+<div class="maps" id="mapGrid"></div>
+</section>
+</main>
+<div id="tip" role="tooltip"></div>
+
+<script>
+const DATA = /*__DATA__*/null;
+const OUTCOMES = ["diabetes","hypertension","asthma","opioids","total"];
+const SHORT = {diabetes: "diabetes", hypertension: "hypert.", asthma: "asthma", opioids: "opioids", total: "total"};
+const GROUPS = [
+  ["Official measures", [["NDVI", "NDVI"], ["WHO", "WHO"], ["ESA WHO", "ESA WHO"], ["NE", "NE"]]],
+  ["Our measures", [["on-road, aerial", "on-road, aerial"], ["on-road, aerial, weighted", "on-road, aerial, weighted"],
+                    ["on-road, street view", "on-road, street view"], ["on-road, street view, weighted", "on-road, street view, weighted"],
+                    ["off-road", "off-road"]]]
+];
+const MODELS = {
+  dml: {name: "Double ML (Table 2)", unit: "% per SD", dec: 1, note: "Change in prescribing for one SD more of a measure, as % of mean prescribing."},
+  psm: {name: "PSM (Table 1)", unit: "% (ATE, above vs below median)", dec: 1, note: "Difference in prescribing between areas above and below the citywide median of a measure, as % of the below-median mean."},
+  ols: {name: "OLS (SI Table S4)", unit: "standardised coefficient", dec: 2, note: "Standardised OLS coefficient of the measure, added to the controls one at a time (HC3 standard errors)."}
+};
+const NS = "http://www.w3.org/2000/svg";
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const fmt = (v, d = 2) => v == null || isNaN(v) ? "–" : (v > 0 ? "+" : v < 0 ? "−" : "") + Math.abs(v).toFixed(d);
+function el(tag, attrs = {}, parent) { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; }
+const tip = document.getElementById("tip");
+function showTip(ev, html) { tip.innerHTML = html; tip.style.display = "block"; const x = Math.min(ev.clientX + 14, innerWidth - tip.offsetWidth - 8); tip.style.left = x + "px"; tip.style.top = (ev.clientY + 14) + "px"; }
+function hideTip() { tip.style.display = "none"; }
+function mix(a, b, t) { const p = h => [1,3,5].map(i => parseInt(h.slice(i, i + 2), 16)); const A = p(a), B = p(b); return "rgb(" + A.map((x, i) => Math.round(x + (B[i] - x) * t)).join(",") + ")"; }
+
+/* Two matrices (wards, LSOAs) side by side with shared row labels and one colour scale */
+function drawPair(hostId, panels, unit, dec) {
+  const host = document.getElementById(hostId); host.innerHTML = "";
+  const present = new Set(panels.flatMap(p => p.rows.map(r => r.g)));
+  const layout = []; // {type: "grp"|"row"|"gap", ...}
+  GROUPS.forEach(([gname, items]) => {
+    const its = items.filter(it => it === null || present.has(it[0]));
+    if (!its.some(Boolean)) return;
+    layout.push({type: "grp", text: gname});
+    its.forEach((it, k) => { if (it === null) { if (k > 0 && k < its.length - 1) layout.push({type: "gap"}); } else layout.push({type: "row", g: it[0], text: it[1]}); });
+  });
+  const cw = 56, ch = 28, L = 214, gapX = 30, T = 46, gh = 22, gapH = 6;
+  const PW = cw * OUTCOMES.length;
+  let y = T; layout.forEach(r => { r.y = y; y += r.type === "row" ? ch : r.type === "grp" ? gh : gapH; });
+  const W = L + PW * 2 + gapX, H = y + 4;
+  const svg = el("svg", {viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: "img", "aria-label": "Effect matrices, wards and LSOAs"}, host);
+  const all = panels.flatMap(p => p.rows.map(r => Math.abs(r.e)));
+  const max = Math.max(...all, 0) || 1;
+  const neg = css("--neg"), pos = css("--pos"), mid = css("--mid"), ink = css("--ink");
+  layout.forEach(r => {
+    if (r.type === "grp") { const t = el("text", {x: 4, y: r.y + gh - 6, class: "grp"}, svg); t.textContent = r.text; }
+    if (r.type === "row") { const t = el("text", {x: 16, y: r.y + ch / 2 + 4, class: "lbl"}, svg); t.textContent = r.text; }
+  });
+  panels.forEach((p, pi) => {
+    const x0 = L + pi * (PW + gapX);
+    const pt = el("text", {x: x0 + PW / 2, y: 14, "text-anchor": "middle", class: "panel"}, svg); pt.textContent = p.title;
+    OUTCOMES.forEach((o, j) => { const t = el("text", {x: x0 + cw * j + cw / 2, y: 36, "text-anchor": "middle"}, svg); t.textContent = SHORT[o]; });
+    if (!p.rows.length) {
+      el("rect", {x: x0 + 1, y: T, width: PW - 2, height: H - T - 4, rx: 6, fill: "none", stroke: css("--grid"), "stroke-dasharray": "4 4"}, svg);
+      const t = el("text", {x: x0 + PW / 2, y: T + (H - T) / 2, "text-anchor": "middle"}, svg); t.textContent = p.empty || "not reported";
+      return;
+    }
+    layout.filter(r => r.type === "row").forEach(r => {
+      OUTCOMES.forEach((o, j) => {
+        const d = p.rows.find(q => q.g === r.g && q.o === o), x = x0 + cw * j, yy = r.y;
+        if (!d) { const t = el("text", {x: x + cw / 2, y: yy + ch / 2 + 4, "text-anchor": "middle"}, svg); t.textContent = "·"; t.style.fill = css("--muted"); return; }
+        const k = Math.min(1, Math.abs(d.e) / max), fill = mix(mid, d.e < 0 ? neg : pos, 0.12 + 0.88 * k);
+        el("rect", {x: x + 2, y: yy + 2, width: cw - 4, height: ch - 4, rx: 4, fill}, svg);
+        if (d.s) el("rect", {x: x + 2.25, y: yy + 2.25, width: cw - 4.5, height: ch - 4.5, rx: 4, fill: "none", stroke: ink, "stroke-width": 2.5}, svg);
+        const tx = el("text", {x: x + cw / 2, y: yy + ch / 2 + 4, "text-anchor": "middle"}, svg);
+        tx.textContent = fmt(d.e, dec); tx.style.fill = k > 0.55 ? "#ffffff" : ink; tx.style.opacity = d.s ? 1 : 0.75;
+        const hit = el("rect", {x, y: yy, width: cw, height: ch, fill: "transparent"}, svg);
+        const ci = d.se != null ? `<br>± ${d.se} SE` : d.lo != null ? `<br>95 % CI ${fmt(d.lo)} to ${fmt(d.hi)}` : "";
+        hit.addEventListener("mousemove", ev => showTip(ev, `<b>${r.text}</b> → ${o}<br>${p.title}<br>${fmt(d.e, dec)} ${unit}${ci}<br>${d.s ? "significant" : "not significant"}${d.n ? ` · N ${d.n}` : ""}${d.src ? `<br><span style="color:var(--ink-2)">${d.src}</span>` : ""}`));
+        hit.addEventListener("mouseleave", hideTip);
+      });
+    });
+  });
+}
+
+
+function drawMatrix() {
+  const m = document.getElementById("model").value, meta = MODELS[m];
+  drawPair("matrix", [{title: `Wards (${DATA.n.wards})`, rows: DATA.models[m].wards}, {title: `LSOAs (${DATA.n.lsoas.toLocaleString("en-GB")})`, rows: DATA.models[m].lsoas}], meta.unit, meta.dec);
+  document.getElementById("matrixNote").textContent = `${meta.name}. ${meta.note} Negative values mean fewer prescriptions with more greenery. Outlined cells are significant at the 5 % level.`;
+}
+function corrTable() {
+  const g = DATA.corr;
+  const cell = (v, diag) => { const p = Math.round(Math.abs(v) * 85), c = v >= 0 ? "--pos" : "--neg";
+    return `<td class="cell${Math.abs(v) > 0.6 ? " dark" : ""}${diag ? " diag" : ""}" style="background:color-mix(in srgb, var(${c}) ${p}%, var(--surface))">${v.toFixed(2)}</td>`; };
+  let h = `<table class="corr"><thead><tr><th></th>${g.cols.map(c => `<th class="col">${c}</th>`).join("")}</tr></thead><tbody>`;
+  g.cols.forEach((c, i) => { h += `<tr><th class="row">${c}</th>${g.r[i].map((v, j) => j > i ? "<td></td>" : cell(v, i === j)).join("")}</tr>`; });
+  document.getElementById("corr").innerHTML = h + `</tbody></table><div class="corr-key">−1<span class="bar" style="background:linear-gradient(90deg, var(--neg), var(--surface), var(--pos))"></span>+1 · Pearson r, ${g.n} wards</div>`;
+}
+
+function drawQof() {
+  const Q = DATA.qof;
+  let h = `<table style="width:auto"><thead><tr><th>Condition</th><th>Comparison</th><th style="text-align:right">r</th></tr></thead><tbody>`;
+  Q.forEach((r, i) => { const first = i === 0 || Q[i - 1].condition !== r.condition;
+    h += `<tr${first && i ? ' style="border-top:2px solid var(--axis)"' : ""}><td class="grp">${first ? r.condition : ""}</td><td>${r.comparison}</td><td style="text-align:right;font-variant-numeric:tabular-nums">${r.r == null ? "–" : r.r.toFixed(2)}</td></tr>`; });
+  document.getElementById("qofTable").innerHTML = h + "</tbody></table>";
+}
+
+const money = v => (v < 0 ? "−" : v > 0 ? "+" : "") + "£" + (Math.abs(v) / 1e6).toFixed(1) + " M";
+const nItems = v => (v < 0 ? "−" : v > 0 ? "+" : "") + Math.round(Math.abs(v)).toLocaleString("en-GB") + " items";
+function drawCost() {
+  const C = DATA.cost, cpi = C.cost_per_item;
+  const cell = (n, sig, lo, hi) => `<td class="${sig ? "" : "ns"}"${lo != null ? ` title="95 % interval ${money(lo * cpi)} to ${money(hi * cpi)}"` : ""}>${money(n * cpi)}<span class="it">${nItems(n)}</span></td>`;
+  let h = `<table class="sav"><thead><tr><th></th><th class="grp" colspan="2">Wards</th><th class="grp" colspan="2">LSOAs</th></tr>
+    <tr><th>Outcome</th>${"<th>DML, +1 SD</th><th>PSM, to median</th>".repeat(2)}</tr></thead><tbody><tr><td>Diabetes</td>`;
+  ["wards", "lsoas"].forEach(lv => { const r = C.rows[lv];
+    h += cell(r.items_plus_sd, r.dml_significant, r.items_plus_sd_low, r.items_plus_sd_high) + cell(r.items_to_median_psm, r.psm_significant); });
+  document.getElementById("costTable").innerHTML = h + `</tr></tbody></table><p class="small">London patients received ${(C.items_total / 1e6).toFixed(1)} million diabetes prescription items in 2016, costing about £${(C.cost_total / 1e6).toFixed(0)} million. Hover over a DML cell for its 95 % interval.</p>`;
+  document.getElementById("cpi").textContent = `£${cpi.toFixed(2)} per diabetes item`;
+}
+
+/* Maps and distributions */
+const MAP_UNIT = {"on-road, aerial": ["On-road, aerial", "% of the road strip that is green", 100],
+  "on-road, aerial, weighted": ["On-road, aerial, weighted", "% of the road strip that is green, roads weighted by centrality", 100],
+  "on-road, street view": ["On-road, street view", "% trees in street view images", 100],
+  "on-road, street view, weighted": ["On-road, street view, weighted", "% trees in street view images, roads weighted by centrality", 100],
+  "off-road": ["Off-road", "% of the area that is accessible public green space", 100], "NDVI": ["NDVI", "% of the area that is green", 100],
+  "WHO": ["WHO", "% of residents meeting the WHO target", 100], "ESA WHO": ["ESA WHO", "% of residents meeting the ESA WHO target", 100],
+  "NE": ["NE", "% of residents meeting the Natural England target", 100]};
+const OUT_UNIT = Object.fromEntries(OUTCOMES.map(o =>
+  [o, [o === "total" ? "Total (all prescribing)" : o[0].toUpperCase() + o.slice(1), "yearly quantity per registered patient", 1]]));
+const OFFICIAL = new Set(["NDVI", "WHO", "ESA WHO", "NE"]);
+function drawMaps() {
+  drawMapSet("mapGridOut", DATA.maps.outcomes, OUT_UNIT, () => "magenta");
+  drawMapSet("mapGrid", DATA.maps.measures, MAP_UNIT, g => OFFICIAL.has(g) ? "blue" : "teal");
+}
+function drawMapSet(hostId, list, UNITS, rampOf) {
+  const M = DATA.maps, host = document.getElementById(hostId); host.innerHTML = "";
+  const nodata = css("--nodata");
+  list.forEach(ms => {
+    const ramp = DATA.ramps[rampOf(ms.g)];
+    const [title, unit, k] = UNITS[ms.g], vals = Object.values(ms.vals).map(v => v * k).sort((a, b) => a - b);
+    const q = [1, 2, 3, 4, 5, 6].map(i => vals[Math.floor(i * vals.length / 7)]), cls = v => q.filter(b => v >= b).length;
+    const top = vals[vals.length - 1], dec = top < 1 ? 2 : top < 20 ? 1 : 0;
+    const card = document.createElement("div"); card.className = "mapcard";
+    card.innerHTML = `<h3>${title}</h3><div class="unit">${unit}</div><div class="mappair"><div class="m"></div><div class="hst"></div></div>`;
+    host.appendChild(card);
+    const svg = el("svg", {viewBox: `0 0 ${M.w} ${M.h}`, role: "img", "aria-label": `Map of ${title}`}, card.querySelector(".m"));
+    M.areas.forEach(a => {
+      const raw = ms.vals[a.c], v = raw == null ? null : raw * k;
+      const p = el("path", {d: a.d, fill: v == null ? nodata : ramp[cls(v)], stroke: css("--surface"), "stroke-width": 0.6}, svg);
+      p.addEventListener("mousemove", ev => showTip(ev, `<b>${a.n}</b><br>${title}: ${v == null ? "no value" : v.toFixed(dec + 1)}`));
+      p.addEventListener("mouseleave", hideTip);
+    });
+    M.boroughs.forEach(d => el("path", {d, fill: "none", stroke: css("--ink-2"), "stroke-width": 0.9, "stroke-opacity": 0.55, "pointer-events": "none"}, svg));
+    // histogram: 24 bins over the observed range; each bar coloured by the septile of its midpoint
+    const lo = vals[0], hi = vals[vals.length - 1], nb = 24, bw = (hi - lo) / nb || 1, counts = Array(nb).fill(0);
+    vals.forEach(v => counts[Math.min(nb - 1, Math.floor((v - lo) / bw))]++);
+    const HW = 300, HH = 220, B = 30, T = 8, cmax = Math.max(...counts);
+    const hs = el("svg", {viewBox: `0 0 ${HW} ${HH}`, role: "img", "aria-label": `Distribution of ${title}`}, card.querySelector(".hst"));
+    const X = v => 6 + (v - lo) / (hi - lo || 1) * (HW - 12), Y = c => T + (1 - c / cmax) * (HH - T - B);
+    counts.forEach((c, i) => {
+      const x0 = X(lo + i * bw), x1 = X(lo + (i + 1) * bw), mid = lo + (i + 0.5) * bw;
+      if (c) el("rect", {x: x0 + 1, y: Y(c), width: Math.max(1, x1 - x0 - 2), height: HH - B - Y(c), rx: 2, fill: ramp[cls(mid)]}, hs);
+      const hit = el("rect", {x: x0, y: T, width: x1 - x0, height: HH - B - T, fill: "transparent"}, hs);
+      hit.addEventListener("mousemove", ev => showTip(ev, `${(lo + i * bw).toFixed(dec + 1)} to ${(lo + (i + 1) * bw).toFixed(dec + 1)}<br>${c} wards`));
+      hit.addEventListener("mouseleave", hideTip);
+    });
+    el("line", {x1: 6, x2: HW - 6, y1: HH - B, y2: HH - B, stroke: css("--axis")}, hs);
+    const med = vals[Math.floor(vals.length / 2)];
+    el("line", {x1: X(med), x2: X(med), y1: T, y2: HH - B, stroke: css("--ink"), "stroke-dasharray": "3 3", "pointer-events": "none"}, hs);
+    [[lo, "start"], [hi, "end"]].forEach(([v, a]) => { const t = el("text", {x: X(v), y: HH - B + 16, "text-anchor": a}, hs); t.textContent = v.toFixed(dec); });
+    const mt = el("text", {x: X(med), y: HH - 2, "text-anchor": "middle"}, hs); mt.textContent = `median ${med.toFixed(dec)}`;
+    card.querySelector(".mappair").insertAdjacentHTML("afterend",
+      `<div class="ramp">${ramp.map((c, i) => `<div><i style="background:${c}"></i>${(i === 0 ? lo : q[i - 1]).toFixed(dec)}</div>`).join("")}</div>`);
+  });
+}
+
+function boxPanel(id, rows, ylab, top, colOf, sub, step = 20, unitTick = "%") {
+  const host = document.getElementById(id); host.innerHTML = "";
+  const W = 440, H = 290, L = 50, B = 46, T = 10, R = 6;
+  const svg = el("svg", {viewBox: `0 0 ${W} ${H}`, width: "100%", role: "img", "aria-label": ylab}, host);
+  const y = v => T + (1 - v / top) * (H - T - B), gw = (W - L - R) / rows.length, bw = Math.min(46, gw * 0.5);
+  for (let v = 0; v <= top; v += step) { el("line", {x1: L, x2: W - R, y1: y(v), y2: y(v), class: "gr"}, svg); const t = el("text", {x: L - 6, y: y(v) + 4, "text-anchor": "end"}, svg); t.textContent = v + unitTick; }
+  const yl = el("text", {x: 12, y: (H - B) / 2, "text-anchor": "middle", transform: `rotate(-90 12 ${(H - B) / 2})`}, svg); yl.textContent = ylab;
+  rows.forEach((s, i) => {
+    const cx = L + gw * i + gw / 2, x = cx - bw / 2, c = colOf(s.g);
+    el("line", {x1: cx, x2: cx, y1: y(s.hi), y2: y(s.q3), stroke: c, "stroke-width": 1.5}, svg);
+    el("line", {x1: cx, x2: cx, y1: y(s.q1), y2: y(s.lo), stroke: c, "stroke-width": 1.5}, svg);
+    [s.hi, s.lo].forEach(v => el("line", {x1: cx - bw / 4, x2: cx + bw / 4, y1: y(v), y2: y(v), stroke: c, "stroke-width": 1.5}, svg));
+    el("rect", {x, y: y(s.q3), width: bw, height: Math.max(1.5, y(s.q1) - y(s.q3)), rx: 3, fill: c, "fill-opacity": .25, stroke: c, "stroke-width": 1.5}, svg);
+    el("line", {x1: x, x2: x + bw, y1: y(s.med), y2: y(s.med), stroke: c, "stroke-width": 2.5}, svg);
+    const t = el("text", {x: cx, y: H - 26, "text-anchor": "middle", class: "lbl"}, svg); t.textContent = s.g;
+    if (sub && sub[s.g]) { const u = el("text", {x: cx, y: H - 10, "text-anchor": "middle"}, svg); u.textContent = sub[s.g]; u.style.fontSize = "11px"; }
+    const hit = el("rect", {x: cx - gw / 2, y: T, width: gw, height: H - T - B, fill: "transparent"}, svg);
+    hit.addEventListener("mousemove", ev => showTip(ev, `<b>${s.g}</b><br>median ${s.med.toFixed(1)}<br>quartiles ${s.q1.toFixed(1)} to ${s.q3.toFixed(1)}<br>whiskers ${s.lo.toFixed(1)} to ${s.hi.toFixed(1)}<br>range ${s.min.toFixed(1)} to ${s.max.toFixed(1)} · ${s.n} wards`));
+    hit.addEventListener("mouseleave", hideTip);
+  });
+  el("line", {x1: L, x2: W - R, y1: y(0), y2: y(0), class: "ax"}, svg);
+}
+
+function drawFig1() {
+  const F = DATA.fig1, mag = DATA.colours.magenta;
+  boxPanel("fig1", F.filter(s => s.g !== "total"), "yearly quantity per patient", 140, () => mag, null, 20, "");
+  boxPanel("fig1t", F.filter(s => s.g === "total"), "all prescribing, per patient", 2000, () => mag, null, 400, "");
+  document.getElementById("fig1Note").textContent = `${F[0].n} wards. All prescribing is much larger, so it has its own scale (right). Quantity is the number of units dispensed (tablets, millilitres, doses) per registered patient in a year. Boxes: quartiles; thick line: median; whiskers: the most extreme wards within 1.5 × the interquartile range (outliers not drawn).`;
+}
+const FIG2_SUB = {"aerial": "on-road", "street view": "on-road", "off-road": "of area", "NDVI": "of area"};
+function drawFig2() {
+  const F = DATA.fig2, col = g => OFFICIAL.has(g) ? DATA.colours.blue : DATA.colours.teal;
+  boxPanel("fig2L", F.left, "greenery percentage", 100, col, FIG2_SUB);
+  boxPanel("fig2R", F.right, "percentage of people with access", 100, col);
+  const md = g => [...F.left, ...F.right].find(s => s.g === g).med.toFixed(0);
+  document.getElementById("fig2Note").textContent = `${F.left[0].n} wards; on-road measures unweighted. Medians: on-road aerial ${md("aerial")} % (of the road strip), on-road street view ${md("street view")} % (of image pixels), off-road ${md("off-road")} %, NDVI ${md("NDVI")} %; ESA WHO ${md("ESA WHO")} %, WHO ${md("WHO")} %, NE ${md("NE")} %. Boxes: quartiles; thick line: median; whiskers: 1.5 × the interquartile range (outliers not drawn).`;
+}
+const sel = document.getElementById("model");
+sel.innerHTML = Object.entries(MODELS).map(([k, v]) => `<option value="${k}">${v.name}</option>`).join(""); sel.value = "dml";
+sel.addEventListener("change", drawMatrix);
+function drawAll() { drawFig2(); drawFig1(); drawMatrix(); drawCost(); drawMaps(); }
+corrTable(); drawQof(); drawAll();
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", drawAll);
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+condition,comparison,method,n_wards,r
+diabetes,quantity / patient vs QOF prevalence,pearson,637,0.96
+diabetes,quantity / patient vs QOF prevalence,spearman,637,0.953
+diabetes,items / patient vs QOF prevalence,pearson,637,0.832
+diabetes,items / patient vs QOF prevalence,spearman,637,0.861
+diabetes,total quantity vs QOF register,pearson,637,0.97
+diabetes,total quantity vs QOF register,spearman,637,0.968
+hypertension,quantity / patient vs QOF prevalence,pearson,637,0.939
+hypertension,quantity / patient vs QOF prevalence,spearman,637,0.942
+hypertension,items / patient vs QOF prevalence,pearson,637,0.663
+hypertension,items / patient vs QOF prevalence,spearman,637,0.681
+hypertension,total quantity vs QOF register,pearson,637,0.945
+hypertension,total quantity vs QOF register,spearman,637,0.945
+asthma,quantity / patient vs QOF prevalence,pearson,637,0.61
+asthma,quantity / patient vs QOF prevalence,spearman,637,0.591
+asthma,items / patient vs QOF prevalence,pearson,637,0.634
+asthma,items / patient vs QOF prevalence,spearman,637,0.594
+asthma,total quantity vs QOF register,pearson,637,0.821
+asthma,total quantity vs QOF register,spearman,637,0.802
+depression,quantity / patient vs QOF prevalence,pearson,637,0.512
+depression,quantity / patient vs QOF prevalence,spearman,637,0.505
+depression,items / patient vs QOF prevalence,pearson,637,0.29
+depression,items / patient vs QOF prevalence,spearman,637,0.285
+depression,total quantity vs QOF register,pearson,637,0.652
+depression,total quantity vs QOF register,spearman,637,0.651

@@ -1,0 +1,296 @@
+Outcome,Control,Coeff,P,AdjR2,N,Greenery,Label
+diabetes_prescriptions,Intercept,7.153023832973116e-17,0.9999999999999929,0.6905577607788077,4835,,Baseline (controls only)
+diabetes_prescriptions,white_percent,-0.6687978447361949,0.0,0.6905577607788077,4835,,Baseline (controls only)
+diabetes_prescriptions,median_age,0.1518920994397314,6.536666656401459e-34,0.6905577607788077,4835,,Baseline (controls only)
+diabetes_prescriptions,IMD_deprivation_score,0.24365901722901037,5.368969079999724e-119,0.6905577607788077,4835,,Baseline (controls only)
+diabetes_prescriptions,building_density,-0.3215056611249687,9.591509535865145e-186,0.6905577607788077,4835,,Baseline (controls only)
+hypertension_prescriptions,Intercept,-4.4159554485334596e-16,0.9999999999999606,0.6131817196573006,4835,,Baseline (controls only)
+hypertension_prescriptions,white_percent,-0.003547701257739436,0.7962630333054743,0.6131817196573006,4835,,Baseline (controls only)
+hypertension_prescriptions,median_age,0.4689241926197824,1.592036225187957e-170,0.6131817196573006,4835,,Baseline (controls only)
+hypertension_prescriptions,IMD_deprivation_score,0.3183599299640351,3.681145024101852e-157,0.6131817196573006,4835,,Baseline (controls only)
+hypertension_prescriptions,building_density,-0.4691917024316543,8.401260580483887e-299,0.6131817196573006,4835,,Baseline (controls only)
+asthma_prescriptions,Intercept,1.5704668468452532e-16,0.9999999999999889,0.3912656309798731,4835,,Baseline (controls only)
+asthma_prescriptions,white_percent,0.19805446738227547,3.1434521202216706e-27,0.3912656309798731,4835,,Baseline (controls only)
+asthma_prescriptions,median_age,0.2732934014231721,2.725467955746152e-28,0.3912656309798731,4835,,Baseline (controls only)
+asthma_prescriptions,IMD_deprivation_score,0.41935736686716923,1.0415935435097097e-172,0.3912656309798731,4835,,Baseline (controls only)
+asthma_prescriptions,building_density,-0.35864445890130997,6.464773892054857e-97,0.3912656309798731,4835,,Baseline (controls only)
+opioids_prescriptions,Intercept,1.9613217300262775e-16,0.9999999999999872,0.2808925637823252,4835,,Baseline (controls only)
+opioids_prescriptions,white_percent,0.5734561690701486,2.7678912068041737e-208,0.2808925637823252,4835,,Baseline (controls only)
+opioids_prescriptions,median_age,0.0937592677699175,6.4401490858954015e-06,0.2808925637823252,4835,,Baseline (controls only)
+opioids_prescriptions,IMD_deprivation_score,0.583812283030119,3.747007009905342e-251,0.2808925637823252,4835,,Baseline (controls only)
+opioids_prescriptions,building_density,0.0450553641607481,0.0038515506477960213,0.2808925637823252,4835,,Baseline (controls only)
+total_prescriptions,Intercept,-2.9967348047499343e-16,0.9999999999999812,0.21178707901145088,4835,,Baseline (controls only)
+total_prescriptions,white_percent,-0.07221888255048149,4.663083120054137e-05,0.21178707901145088,4835,,Baseline (controls only)
+total_prescriptions,median_age,0.23439339308279541,7.069836165029537e-31,0.21178707901145088,4835,,Baseline (controls only)
+total_prescriptions,IMD_deprivation_score,0.33541679608481445,3.3967842909023035e-85,0.21178707901145088,4835,,Baseline (controls only)
+total_prescriptions,building_density,-0.22202118910885407,1.038591715879109e-41,0.21178707901145088,4835,,Baseline (controls only)
+diabetes_prescriptions,Intercept,7.153023832973116e-17,0.9999999999999929,0.6909322353248414,4835,SAT_NDVI,NDVI
+diabetes_prescriptions,white_percent,-0.6669812600406413,0.0,0.6909322353248414,4835,SAT_NDVI,NDVI
+diabetes_prescriptions,median_age,0.15885729556403422,1.868886105238299e-33,0.6909322353248414,4835,SAT_NDVI,NDVI
+diabetes_prescriptions,IMD_deprivation_score,0.2436570663043535,3.1082534853996624e-119,0.6909322353248414,4835,SAT_NDVI,NDVI
+diabetes_prescriptions,building_density,-0.3283498822682804,4.285249531004499e-189,0.6909322353248414,4835,SAT_NDVI,NDVI
+diabetes_prescriptions,SAT_NDVI,-0.02437998013878662,0.011585684986532455,0.6909322353248414,4835,SAT_NDVI,NDVI
+hypertension_prescriptions,Intercept,-4.4159554485334596e-16,0.9999999999999607,0.6131954943273994,4835,SAT_NDVI,NDVI
+hypertension_prescriptions,white_percent,-0.004388177476955781,0.7492977487198698,0.6131954943273994,4835,SAT_NDVI,NDVI
+hypertension_prescriptions,median_age,0.4657016169155046,2.933989014625042e-159,0.6131954943273994,4835,SAT_NDVI,NDVI
+hypertension_prescriptions,IMD_deprivation_score,0.3183608325951013,3.5868476371335047e-157,0.6131954943273994,4835,SAT_NDVI,NDVI
+hypertension_prescriptions,building_density,-0.4660250980205905,1.359360176139404e-279,0.6131954943273994,4835,SAT_NDVI,NDVI
+hypertension_prescriptions,SAT_NDVI,0.011279844854892989,0.31255012495178436,0.6131954943273994,4835,SAT_NDVI,NDVI
+asthma_prescriptions,Intercept,1.5704668468452532e-16,0.9999999999999889,0.39113963672309704,4835,SAT_NDVI,NDVI
+asthma_prescriptions,white_percent,0.19807637843507478,3.24850990227773e-27,0.39113963672309704,4835,SAT_NDVI,NDVI
+asthma_prescriptions,median_age,0.2733774133497351,1.4003683115539635e-27,0.39113963672309704,4835,SAT_NDVI,NDVI
+asthma_prescriptions,IMD_deprivation_score,0.41935734333575153,1.2541458778089482e-172,0.39113963672309704,4835,SAT_NDVI,NDVI
+asthma_prescriptions,building_density,-0.35872701166706383,1.7635686275414773e-93,0.39113963672309704,4835,SAT_NDVI,NDVI
+asthma_prescriptions,SAT_NDVI,-0.0002940633780404634,0.9813590526978254,0.39113963672309704,4835,SAT_NDVI,NDVI
+opioids_prescriptions,Intercept,1.9613217300262775e-16,0.9999999999999871,0.28124995210768433,4835,SAT_NDVI,NDVI
+opioids_prescriptions,white_percent,0.5715043077159788,1.9762996796555695e-206,0.28124995210768433,4835,SAT_NDVI,NDVI
+opioids_prescriptions,median_age,0.08627539037487224,5.3992484530204046e-05,0.28124995210768433,4835,SAT_NDVI,NDVI
+opioids_prescriptions,IMD_deprivation_score,0.583814379235406,6.029996159684775e-251,0.28124995210768433,4835,SAT_NDVI,NDVI
+opioids_prescriptions,building_density,0.05240925786122751,0.0011829191159167544,0.28124995210768433,4835,SAT_NDVI,NDVI
+opioids_prescriptions,SAT_NDVI,0.026195498159153962,0.065976424874593,0.28124995210768433,4835,SAT_NDVI,NDVI
+total_prescriptions,Intercept,-2.9967348047499343e-16,0.9999999999999812,0.21409248232055833,4835,SAT_NDVI,NDVI
+total_prescriptions,white_percent,-0.07652882719387885,1.4730727642070673e-05,0.21409248232055833,4835,SAT_NDVI,NDVI
+total_prescriptions,median_age,0.21786809162031762,9.649995506261784e-26,0.21409248232055833,4835,SAT_NDVI,NDVI
+total_prescriptions,IMD_deprivation_score,0.3354214247582246,1.809672761100668e-85,0.21409248232055833,4835,SAT_NDVI,NDVI
+total_prescriptions,building_density,-0.20578290727864587,4.7034178052389663e-35,0.21409248232055833,4835,SAT_NDVI,NDVI
+total_prescriptions,SAT_NDVI,0.05784281077699486,2.4236982853306527e-05,0.21409248232055833,4835,SAT_NDVI,NDVI
+diabetes_prescriptions,Intercept,-8.744090521095593e-17,0.9999999999999912,0.7046399337013619,4642,WHO,WHO
+diabetes_prescriptions,white_percent,-0.6610863849832477,0.0,0.7046399337013619,4642,WHO,WHO
+diabetes_prescriptions,median_age,0.14840600325755834,1.607357852950104e-31,0.7046399337013619,4642,WHO,WHO
+diabetes_prescriptions,IMD_deprivation_score,0.2605099685764786,2.2935157955159045e-136,0.7046399337013619,4642,WHO,WHO
+diabetes_prescriptions,building_density,-0.33268130812532004,1.1822304410254037e-223,0.7046399337013619,4642,WHO,WHO
+diabetes_prescriptions,WHO,-0.008693155493501928,0.29443423266181246,0.7046399337013619,4642,WHO,WHO
+hypertension_prescriptions,Intercept,-9.612536461256482e-16,0.9999999999999155,0.6179100885976629,4642,WHO,WHO
+hypertension_prescriptions,white_percent,0.008133027800986691,0.559976220285948,0.6179100885976629,4642,WHO,WHO
+hypertension_prescriptions,median_age,0.4707216619138076,5.2645518427850536e-161,0.6179100885976629,4642,WHO,WHO
+hypertension_prescriptions,IMD_deprivation_score,0.3355482814138584,5.289670054379174e-166,0.6179100885976629,4642,WHO,WHO
+hypertension_prescriptions,building_density,-0.481604832021248,0.0,0.6179100885976629,4642,WHO,WHO
+hypertension_prescriptions,WHO,0.0037820407865684228,0.6706539357017556,0.6179100885976629,4642,WHO,WHO
+asthma_prescriptions,Intercept,-7.35089072945172e-16,0.9999999999999483,0.40595625486448794,4642,WHO,WHO
+asthma_prescriptions,white_percent,0.21740450943102488,6.90510384819035e-31,0.40595625486448794,4642,WHO,WHO
+asthma_prescriptions,median_age,0.2728294241963676,2.832263044881594e-26,0.40595625486448794,4642,WHO,WHO
+asthma_prescriptions,IMD_deprivation_score,0.4374792295470848,9.226084839713196e-180,0.40595625486448794,4642,WHO,WHO
+asthma_prescriptions,building_density,-0.37958479983747506,2.892326934974617e-115,0.40595625486448794,4642,WHO,WHO
+asthma_prescriptions,WHO,0.014247528616341525,0.2233724698797258,0.40595625486448794,4642,WHO,WHO
+opioids_prescriptions,Intercept,-2.932089250215486e-16,0.9999999999999809,0.30324739786163335,4642,WHO,WHO
+opioids_prescriptions,white_percent,0.5864091458861911,3.8310586211252015e-209,0.30324739786163335,4642,WHO,WHO
+opioids_prescriptions,median_age,0.10517427186100393,6.135840311360562e-07,0.30324739786163335,4642,WHO,WHO
+opioids_prescriptions,IMD_deprivation_score,0.5982585248622656,3.000349316248324e-258,0.30324739786163335,4642,WHO,WHO
+opioids_prescriptions,building_density,0.020743232800172415,0.1787104026502372,0.30324739786163335,4642,WHO,WHO
+opioids_prescriptions,WHO,0.04328577967678737,0.0005883146711116317,0.30324739786163335,4642,WHO,WHO
+total_prescriptions,Intercept,-4.479923376710104e-16,0.9999999999999725,0.21839280466826516,4642,WHO,WHO
+total_prescriptions,white_percent,-0.05154451387525368,0.0046416854251812144,0.21839280466826516,4642,WHO,WHO
+total_prescriptions,median_age,0.2351191737401541,1.3907631823156875e-29,0.21839280466826516,4642,WHO,WHO
+total_prescriptions,IMD_deprivation_score,0.3541399812516254,1.957754907209259e-85,0.21839280466826516,4642,WHO,WHO
+total_prescriptions,building_density,-0.23849717828041625,7.546727656938148e-50,0.21839280466826516,4642,WHO,WHO
+total_prescriptions,WHO,-0.004953996362176153,0.7230026107065461,0.21839280466826516,4642,WHO,WHO
+diabetes_prescriptions,Intercept,-8.744090521095593e-17,0.9999999999999912,0.7047056940974267,4642,ESA_WHO_exposure,ESA WHO
+diabetes_prescriptions,white_percent,-0.6611895732330842,0.0,0.7047056940974267,4642,ESA_WHO_exposure,ESA WHO
+diabetes_prescriptions,median_age,0.14538425034156405,7.323384285328357e-29,0.7047056940974267,4642,ESA_WHO_exposure,ESA WHO
+diabetes_prescriptions,IMD_deprivation_score,0.26039517846427856,4.7109329364582e-140,0.7047056940974267,4642,ESA_WHO_exposure,ESA WHO
+diabetes_prescriptions,building_density,-0.3312473768659502,1.8212197580550352e-214,0.7047056940974267,4642,ESA_WHO_exposure,ESA WHO
+diabetes_prescriptions,ESA_WHO_exposure,-0.012425185621301734,0.22944051906593477,0.7047056940974267,4642,ESA_WHO_exposure,ESA WHO
+hypertension_prescriptions,Intercept,-9.612536461256482e-16,0.9999999999999155,0.6185293842058377,4642,ESA_WHO_exposure,ESA WHO
+hypertension_prescriptions,white_percent,0.011762021944306452,0.4023968814694905,0.6185293842058377,4642,ESA_WHO_exposure,ESA WHO
+hypertension_prescriptions,median_age,0.4640593112300812,4.180269729398746e-146,0.6185293842058377,4642,ESA_WHO_exposure,ESA WHO
+hypertension_prescriptions,IMD_deprivation_score,0.3390034726425936,7.146915184422386e-174,0.6185293842058377,4642,ESA_WHO_exposure,ESA WHO
+hypertension_prescriptions,building_density,-0.4787257442858406,0.0,0.6185293842058377,4642,ESA_WHO_exposure,ESA WHO
+hypertension_prescriptions,ESA_WHO_exposure,-0.026449858987162837,0.007711028386998731,0.6185293842058377,4642,ESA_WHO_exposure,ESA WHO
+asthma_prescriptions,Intercept,-7.35089072945172e-16,0.9999999999999483,0.4058086937740284,4642,ESA_WHO_exposure,ESA WHO
+asthma_prescriptions,white_percent,0.22071095187977557,1.9874103099917256e-31,0.4058086937740284,4642,ESA_WHO_exposure,ESA WHO
+asthma_prescriptions,median_age,0.2707992670636464,4.371866754754735e-24,0.4058086937740284,4642,ESA_WHO_exposure,ESA WHO
+asthma_prescriptions,IMD_deprivation_score,0.4406481309674975,2.555380214136953e-190,0.4058086937740284,4642,ESA_WHO_exposure,ESA WHO
+asthma_prescriptions,building_density,-0.3788686482374553,2.808689270118021e-117,0.4058086937740284,4642,ESA_WHO_exposure,ESA WHO
+asthma_prescriptions,ESA_WHO_exposure,-0.007520499194467284,0.5496338492840576,0.4058086937740284,4642,ESA_WHO_exposure,ESA WHO
+opioids_prescriptions,Intercept,-2.932089250215486e-16,0.9999999999999809,0.30150412270367666,4642,ESA_WHO_exposure,ESA WHO
+opioids_prescriptions,white_percent,0.5927538313834785,6.125637182022284e-215,0.30150412270367666,4642,ESA_WHO_exposure,ESA WHO
+opioids_prescriptions,median_age,0.10724290609428637,9.322853548632067e-07,0.30150412270367666,4642,ESA_WHO_exposure,ESA WHO
+opioids_prescriptions,IMD_deprivation_score,0.6043700123581183,2.2740616127412396e-266,0.30150412270367666,4642,ESA_WHO_exposure,ESA WHO
+opioids_prescriptions,building_density,0.019302098086199922,0.2122491466409957,0.30150412270367666,4642,ESA_WHO_exposure,ESA WHO
+opioids_prescriptions,ESA_WHO_exposure,0.01004368194414657,0.4557473769997613,0.30150412270367666,4642,ESA_WHO_exposure,ESA WHO
+total_prescriptions,Intercept,-4.479923376710104e-16,0.9999999999999725,0.21841770059329335,4642,ESA_WHO_exposure,ESA WHO
+total_prescriptions,white_percent,-0.0515728336778928,0.004198618266400632,0.21841770059329335,4642,ESA_WHO_exposure,ESA WHO
+total_prescriptions,median_age,0.23332930975929275,1.9000535319782472e-27,0.21841770059329335,4642,ESA_WHO_exposure,ESA WHO
+total_prescriptions,IMD_deprivation_score,0.3541035286541021,2.8234556756440675e-88,0.21841770059329335,4642,ESA_WHO_exposure,ESA WHO
+total_prescriptions,building_density,-0.23765022523470636,5.965181763040975e-51,0.21841770059329335,4642,ESA_WHO_exposure,ESA WHO
+total_prescriptions,ESA_WHO_exposure,-0.007351726361222865,0.5716674941587925,0.21841770059329335,4642,ESA_WHO_exposure,ESA WHO
+diabetes_prescriptions,Intercept,-8.744090521095593e-17,0.9999999999999912,0.7048500727485912,4642,Natural_England1,NE
+diabetes_prescriptions,white_percent,-0.6644212672864765,0.0,0.7048500727485912,4642,Natural_England1,NE
+diabetes_prescriptions,median_age,0.1481912800098083,1.7810900744496468e-31,0.7048500727485912,4642,Natural_England1,NE
+diabetes_prescriptions,IMD_deprivation_score,0.2577481658830547,2.6593358597738436e-137,0.7048500727485912,4642,Natural_England1,NE
+diabetes_prescriptions,building_density,-0.32900819507910617,3.0681705560146e-216,0.7048500727485912,4642,Natural_England1,NE
+diabetes_prescriptions,Natural_England1,0.017359817648170846,0.03795078512759718,0.7048500727485912,4642,Natural_England1,NE
+hypertension_prescriptions,Intercept,-9.612536461256482e-16,0.9999999999999155,0.618341002373155,4642,Natural_England1,NE
+hypertension_prescriptions,white_percent,0.006491490950290238,0.6394082027824592,0.618341002373155,4642,Natural_England1,NE
+hypertension_prescriptions,median_age,0.4703017731345945,4.487697193933561e-161,0.618341002373155,4642,Natural_England1,NE
+hypertension_prescriptions,IMD_deprivation_score,0.3345257890094272,2.1527287002899216e-168,0.618341002373155,4642,Natural_England1,NE
+hypertension_prescriptions,building_density,-0.4771225171390901,0.0,0.618341002373155,4642,Natural_England1,NE
+hypertension_prescriptions,Natural_England1,0.021723209172947625,0.0210792325963299,0.618341002373155,4642,Natural_England1,NE
+asthma_prescriptions,Intercept,-7.35089072945172e-16,0.9999999999999482,0.4063111845008913,4642,Natural_England1,NE
+asthma_prescriptions,white_percent,0.21730501836432625,3.0623441259055604e-31,0.4063111845008913,4642,Natural_England1,NE
+asthma_prescriptions,median_age,0.2722575876608878,3.401837371602264e-26,0.4063111845008913,4642,Natural_England1,NE
+asthma_prescriptions,IMD_deprivation_score,0.4380032272461508,6.415961902522308e-187,0.4063111845008913,4642,Natural_England1,NE
+asthma_prescriptions,building_density,-0.3746625219824588,6.5899683769166e-110,0.4063111845008913,4642,Natural_England1,NE
+asthma_prescriptions,Natural_England1,0.024233511695791667,0.03815025744547365,0.4063111845008913,4642,Natural_England1,NE
+opioids_prescriptions,Intercept,-2.932089250215486e-16,0.9999999999999809,0.3023454981419069,4642,Natural_England1,NE
+opioids_prescriptions,white_percent,0.5905615383378536,1.506160193121618e-215,0.3023454981419069,4642,Natural_England1,NE
+opioids_prescriptions,median_age,0.10417638542172633,7.701925013652876e-07,0.3023454981419069,4642,Natural_England1,NE
+opioids_prescriptions,IMD_deprivation_score,0.6030542578961953,4.523843435176068e-268,0.3023454981419069,4642,Natural_England1,NE
+opioids_prescriptions,building_density,0.02693891909800327,0.08548837707650632,0.3023454981419069,4642,Natural_England1,NE
+opioids_prescriptions,Natural_England1,0.03145230316555269,0.013850584068712033,0.3023454981419069,4642,Natural_England1,NE
+total_prescriptions,Intercept,-4.479923376710104e-16,0.9999999999999725,0.2185887973047872,4642,Natural_England1,NE
+total_prescriptions,white_percent,-0.05401362192477083,0.002730187920699873,0.2185887973047872,4642,Natural_England1,NE
+total_prescriptions,median_age,0.23490241935935163,1.3532059225712635e-29,0.2185887973047872,4642,Natural_England1,NE
+total_prescriptions,IMD_deprivation_score,0.35215713588719544,8.138378831454174e-87,0.2185887973047872,4642,Natural_England1,NE
+total_prescriptions,building_density,-0.2352858860758311,4.4095084529604116e-44,0.2185887973047872,4642,Natural_England1,NE
+total_prescriptions,Natural_England1,0.015276271534420299,0.30607364164848405,0.2185887973047872,4642,Natural_England1,NE
+diabetes_prescriptions,Intercept,-1.4607506691874036e-16,0.9999999999999852,0.698366173919748,4834,SAT_on_road_share_u,"on-road, aerial"
+diabetes_prescriptions,white_percent,-0.6601188351675009,0.0,0.698366173919748,4834,SAT_on_road_share_u,"on-road, aerial"
+diabetes_prescriptions,median_age,0.17569845017033597,4.6404437185593357e-42,0.698366173919748,4834,SAT_on_road_share_u,"on-road, aerial"
+diabetes_prescriptions,IMD_deprivation_score,0.24173387611617045,2.466158711219264e-121,0.698366173919748,4834,SAT_on_road_share_u,"on-road, aerial"
+diabetes_prescriptions,building_density,-0.3148774775792181,3.925426525097196e-184,0.698366173919748,4834,SAT_on_road_share_u,"on-road, aerial"
+diabetes_prescriptions,SAT_on_road_share_u,-0.0945904060650467,1.3597995562977944e-28,0.698366173919748,4834,SAT_on_road_share_u,"on-road, aerial"
+hypertension_prescriptions,Intercept,-8.232889196768678e-16,0.9999999999999261,0.6190172939946788,4834,SAT_on_road_share_u,"on-road, aerial"
+hypertension_prescriptions,white_percent,0.004147315120024849,0.7619917604301931,0.6190172939946788,4834,SAT_on_road_share_u,"on-road, aerial"
+hypertension_prescriptions,median_age,0.4886527791741645,1.1898226324871707e-175,0.6190172939946788,4834,SAT_on_road_share_u,"on-road, aerial"
+hypertension_prescriptions,IMD_deprivation_score,0.3166435173479016,9.077342672914502e-158,0.6190172939946788,4834,SAT_on_road_share_u,"on-road, aerial"
+hypertension_prescriptions,building_density,-0.46356778032376317,5.9579824308586385e-295,0.6190172939946788,4834,SAT_on_road_share_u,"on-road, aerial"
+hypertension_prescriptions,SAT_on_road_share_u,-0.08080903573254387,2.8948226135405826e-16,0.6190172939946788,4834,SAT_on_road_share_u,"on-road, aerial"
+asthma_prescriptions,Intercept,-5.374661219553767e-16,0.9999999999999617,0.39403539675890054,4834,SAT_on_road_share_u,"on-road, aerial"
+asthma_prescriptions,white_percent,0.20352180695831354,1.0408538130072737e-28,0.39403539675890054,4834,SAT_on_road_share_u,"on-road, aerial"
+asthma_prescriptions,median_age,0.288230299535428,2.1475884268874766e-30,0.39403539675890054,4834,SAT_on_road_share_u,"on-road, aerial"
+asthma_prescriptions,IMD_deprivation_score,0.41807838665983876,2.066562294745607e-172,0.39403539675890054,4834,SAT_on_road_share_u,"on-road, aerial"
+asthma_prescriptions,building_density,-0.35402427305696066,1.993060291862342e-93,0.39403539675890054,4834,SAT_on_road_share_u,"on-road, aerial"
+asthma_prescriptions,SAT_on_road_share_u,-0.05896477887997383,3.770144603862871e-07,0.39403539675890054,4834,SAT_on_road_share_u,"on-road, aerial"
+opioids_prescriptions,Intercept,7.686993402922226e-17,0.999999999999995,0.2809667133849427,4834,SAT_on_road_share_u,"on-road, aerial"
+opioids_prescriptions,white_percent,0.5745589223221627,3.768504590009946e-209,0.2809667133849427,4834,SAT_on_road_share_u,"on-road, aerial"
+opioids_prescriptions,median_age,0.09833925145649215,4.124948270432875e-06,0.2809667133849427,4834,SAT_on_road_share_u,"on-road, aerial"
+opioids_prescriptions,IMD_deprivation_score,0.5832726418641834,8.046056217525285e-251,0.2809667133849427,4834,SAT_on_road_share_u,"on-road, aerial"
+opioids_prescriptions,building_density,0.0468193108968831,0.0028803351963051066,0.2809667133849427,4834,SAT_on_road_share_u,"on-road, aerial"
+opioids_prescriptions,SAT_on_road_share_u,-0.015233901417348806,0.2382275639646153,0.2809667133849427,4834,SAT_on_road_share_u,"on-road, aerial"
+total_prescriptions,Intercept,-3.6665006968028546e-16,0.9999999999999771,0.21158009219204266,4834,SAT_on_road_share_u,"on-road, aerial"
+total_prescriptions,white_percent,-0.07071639775907976,6.913697534235435e-05,0.21158009219204266,4834,SAT_on_road_share_u,"on-road, aerial"
+total_prescriptions,median_age,0.23935001239349737,1.1586808529205967e-30,0.21158009219204266,4834,SAT_on_road_share_u,"on-road, aerial"
+total_prescriptions,IMD_deprivation_score,0.334981063827391,1.0436395347392734e-84,0.21158009219204266,4834,SAT_on_road_share_u,"on-road, aerial"
+total_prescriptions,building_density,-0.21993256139741665,7.077869088441189e-40,0.21158009219204266,4834,SAT_on_road_share_u,"on-road, aerial"
+total_prescriptions,SAT_on_road_share_u,-0.017930229262720296,0.1479332618399334,0.21158009219204266,4834,SAT_on_road_share_u,"on-road, aerial"
+diabetes_prescriptions,Intercept,-1.4607506691874036e-16,0.9999999999999852,0.6994529418530708,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+diabetes_prescriptions,white_percent,-0.6616397040649595,0.0,0.6994529418530708,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+diabetes_prescriptions,median_age,0.17554702690048213,6.120660970390067e-43,0.6994529418530708,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+diabetes_prescriptions,IMD_deprivation_score,0.23780813326495873,1.9753801037966786e-117,0.6994529418530708,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+diabetes_prescriptions,building_density,-0.3123847534250305,1.0409468909418519e-182,0.6994529418530708,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+diabetes_prescriptions,SAT_on_road_share_w,-0.10043766612902102,1.106675521011379e-32,0.6994529418530708,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+hypertension_prescriptions,Intercept,-8.232889196768678e-16,0.9999999999999261,0.6193277644429358,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+hypertension_prescriptions,white_percent,0.0026231126290993966,0.8477583882171823,0.6193277644429358,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+hypertension_prescriptions,median_age,0.48776572033381976,2.594247068838252e-176,0.6193277644429358,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+hypertension_prescriptions,IMD_deprivation_score,0.31347416635210607,1.0605392760410704e-154,0.6193277644429358,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+hypertension_prescriptions,building_density,-0.461725118737344,4.999987067131405e-292,0.6193277644429358,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+hypertension_prescriptions,SAT_on_road_share_w,-0.08265169258912478,8.106196363436648e-18,0.6193277644429358,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+asthma_prescriptions,Intercept,-5.374661219553767e-16,0.9999999999999617,0.3942669922915165,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+asthma_prescriptions,white_percent,0.20245255153053898,1.4584485613671641e-28,0.3942669922915165,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+asthma_prescriptions,median_age,0.28772763662033235,7.605151714436073e-30,0.3942669922915165,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+asthma_prescriptions,IMD_deprivation_score,0.41573057451881024,5.022871885140699e-170,0.3942669922915165,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+asthma_prescriptions,building_density,-0.35262496683405614,7.798142834103122e-92,0.3942669922915165,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+asthma_prescriptions,SAT_on_road_share_w,-0.06091102019649037,1.70625805202987e-07,0.3942669922915165,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+opioids_prescriptions,Intercept,7.686993402922226e-17,0.999999999999995,0.2810412107013842,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+opioids_prescriptions,white_percent,0.5744213508397076,8.056873148767383e-210,0.2810412107013842,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+opioids_prescriptions,median_age,0.09867655883768611,4.0407232147791744e-06,0.2810412107013842,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+opioids_prescriptions,IMD_deprivation_score,0.5825523567116054,3.3989945357318887e-249,0.2810412107013842,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+opioids_prescriptions,building_density,0.04735771438662731,0.002678800687471804,0.2810412107013842,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+opioids_prescriptions,SAT_on_road_share_w,-0.017680575487435013,0.17977738013499323,0.2810412107013842,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+total_prescriptions,Intercept,-3.6665006968028546e-16,0.9999999999999771,0.2120646679942736,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+total_prescriptions,white_percent,-0.07027973035353056,7.587125129111477e-05,0.2120646679942736,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+total_prescriptions,median_age,0.24176353833071398,4.998266996937543e-31,0.2120646679942736,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+total_prescriptions,IMD_deprivation_score,0.33364245450459257,5.5019907121934916e-83,0.2120646679942736,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+total_prescriptions,building_density,-0.21853535552522188,7.434549102136285e-39,0.2120646679942736,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+total_prescriptions,SAT_on_road_share_w,-0.029200432291052292,0.02553648726289069,0.2120646679942736,4834,SAT_on_road_share_w,"on-road, aerial, weighted"
+diabetes_prescriptions,Intercept,2.5477649910577924e-16,0.999999999999974,0.7066793390488313,4817,GSV_on_road_u,"on-road, street view"
+diabetes_prescriptions,white_percent,-0.6563559294734678,0.0,0.7066793390488313,4817,GSV_on_road_u,"on-road, street view"
+diabetes_prescriptions,median_age,0.18031672371175955,4.4154408443037924e-45,0.7066793390488313,4817,GSV_on_road_u,"on-road, street view"
+diabetes_prescriptions,IMD_deprivation_score,0.23320053100314467,1.6664097513644232e-113,0.7066793390488313,4817,GSV_on_road_u,"on-road, street view"
+diabetes_prescriptions,building_density,-0.3133461344530641,2.672230114598702e-187,0.7066793390488313,4817,GSV_on_road_u,"on-road, street view"
+diabetes_prescriptions,GSV_on_road_u,-0.1298071305260875,7.573882209126596e-50,0.7066793390488313,4817,GSV_on_road_u,"on-road, street view"
+hypertension_prescriptions,Intercept,1.9786689647860456e-16,0.9999999999999823,0.6162326763144743,4817,GSV_on_road_u,"on-road, street view"
+hypertension_prescriptions,white_percent,0.0027420338128550316,0.8425473844096514,0.6162326763144743,4817,GSV_on_road_u,"on-road, street view"
+hypertension_prescriptions,median_age,0.47948751251275834,2.2588494722971204e-163,0.6162326763144743,4817,GSV_on_road_u,"on-road, street view"
+hypertension_prescriptions,IMD_deprivation_score,0.31443420466356314,2.1237118165990997e-153,0.6162326763144743,4817,GSV_on_road_u,"on-road, street view"
+hypertension_prescriptions,building_density,-0.46708147996262955,4.900561402997079e-294,0.6162326763144743,4817,GSV_on_road_u,"on-road, street view"
+hypertension_prescriptions,GSV_on_road_u,-0.05804472039492258,1.7984948119567646e-08,0.6162326763144743,4817,GSV_on_road_u,"on-road, street view"
+asthma_prescriptions,Intercept,1.689186984732416e-16,0.999999999999988,0.39022416093778767,4817,GSV_on_road_u,"on-road, street view"
+asthma_prescriptions,white_percent,0.20188725396137458,5.232874442874046e-28,0.39022416093778767,4817,GSV_on_road_u,"on-road, street view"
+asthma_prescriptions,median_age,0.2845730676052907,3.4515087601393158e-28,0.39022416093778767,4817,GSV_on_road_u,"on-road, street view"
+asthma_prescriptions,IMD_deprivation_score,0.41538389627276096,3.9033597242854936e-168,0.39022416093778767,4817,GSV_on_road_u,"on-road, street view"
+asthma_prescriptions,building_density,-0.35357353965481686,4.741292870017165e-89,0.39022416093778767,4817,GSV_on_road_u,"on-road, street view"
+asthma_prescriptions,GSV_on_road_u,-0.049663120343799064,0.00011446184690519518,0.39022416093778767,4817,GSV_on_road_u,"on-road, street view"
+opioids_prescriptions,Intercept,3.0414581443649613e-16,0.9999999999999801,0.28115654759733355,4817,GSV_on_road_u,"on-road, street view"
+opioids_prescriptions,white_percent,0.573744268555824,1.992276624096724e-207,0.28115654759733355,4817,GSV_on_road_u,"on-road, street view"
+opioids_prescriptions,median_age,0.10055645665056849,3.6023170735974837e-06,0.28115654759733355,4817,GSV_on_road_u,"on-road, street view"
+opioids_prescriptions,IMD_deprivation_score,0.5835363103078628,2.9807120141527287e-246,0.28115654759733355,4817,GSV_on_road_u,"on-road, street view"
+opioids_prescriptions,building_density,0.04798961153330133,0.0024031080921229336,0.28115654759733355,4817,GSV_on_road_u,"on-road, street view"
+opioids_prescriptions,GSV_on_road_u,-0.016106928811665932,0.25020666008645,0.28115654759733355,4817,GSV_on_road_u,"on-road, street view"
+total_prescriptions,Intercept,-3.0026979166986045e-16,0.9999999999999813,0.21127892739462117,4817,GSV_on_road_u,"on-road, street view"
+total_prescriptions,white_percent,-0.07024615831831944,8.078827460582724e-05,0.21127892739462117,4817,GSV_on_road_u,"on-road, street view"
+total_prescriptions,median_age,0.24589039755488032,2.3795255944860404e-31,0.21127892739462117,4817,GSV_on_road_u,"on-road, street view"
+total_prescriptions,IMD_deprivation_score,0.3323019411454303,5.378435615605875e-81,0.21127892739462117,4817,GSV_on_road_u,"on-road, street view"
+total_prescriptions,building_density,-0.21549019464808597,2.154727035789548e-37,0.21127892739462117,4817,GSV_on_road_u,"on-road, street view"
+total_prescriptions,GSV_on_road_u,-0.04133074542095119,0.0026517082287435575,0.21127892739462117,4817,GSV_on_road_u,"on-road, street view"
+diabetes_prescriptions,Intercept,-8.326672684688674e-17,0.9999999999999915,0.7066134872922044,4808,GSV_on_road_w,"on-road, street view, weighted"
+diabetes_prescriptions,white_percent,-0.657182061343968,0.0,0.7066134872922044,4808,GSV_on_road_w,"on-road, street view, weighted"
+diabetes_prescriptions,median_age,0.17803351230773426,3.285252555256644e-44,0.7066134872922044,4808,GSV_on_road_w,"on-road, street view, weighted"
+diabetes_prescriptions,IMD_deprivation_score,0.2339618630702162,1.752003527914021e-113,0.7066134872922044,4808,GSV_on_road_w,"on-road, street view, weighted"
+diabetes_prescriptions,building_density,-0.3117404576120462,1.2709565126256273e-184,0.7066134872922044,4808,GSV_on_road_w,"on-road, street view, weighted"
+diabetes_prescriptions,GSV_on_road_w,-0.1255608857243041,4.055024926912696e-49,0.7066134872922044,4808,GSV_on_road_w,"on-road, street view, weighted"
+hypertension_prescriptions,Intercept,1.5265566588595902e-16,0.9999999999999863,0.6172967728860372,4808,GSV_on_road_w,"on-road, street view, weighted"
+hypertension_prescriptions,white_percent,0.0021137366745755636,0.8779124730234545,0.6172967728860372,4808,GSV_on_road_w,"on-road, street view, weighted"
+hypertension_prescriptions,median_age,0.47866699977000415,4.995174205955178e-164,0.6172967728860372,4808,GSV_on_road_w,"on-road, street view, weighted"
+hypertension_prescriptions,IMD_deprivation_score,0.31595456852860293,9.042640665616091e-155,0.6172967728860372,4808,GSV_on_road_w,"on-road, street view, weighted"
+hypertension_prescriptions,building_density,-0.4673306361657844,3.4198220585413304e-297,0.6172967728860372,4808,GSV_on_road_w,"on-road, street view, weighted"
+hypertension_prescriptions,GSV_on_road_w,-0.054363825514833534,7.066349826502946e-08,0.6172967728860372,4808,GSV_on_road_w,"on-road, street view, weighted"
+asthma_prescriptions,Intercept,3.2612801348363973e-16,0.9999999999999769,0.39160437224223443,4808,GSV_on_road_w,"on-road, street view, weighted"
+asthma_prescriptions,white_percent,0.20181487901882747,4.037192797686645e-28,0.39160437224223443,4808,GSV_on_road_w,"on-road, street view, weighted"
+asthma_prescriptions,median_age,0.28117576704840386,1.4520587577835929e-27,0.39160437224223443,4808,GSV_on_road_w,"on-road, street view, weighted"
+asthma_prescriptions,IMD_deprivation_score,0.41796927612101575,1.8391901931185942e-170,0.39160437224223443,4808,GSV_on_road_w,"on-road, street view, weighted"
+asthma_prescriptions,building_density,-0.3561714207868874,2.169511365544767e-91,0.39160437224223443,4808,GSV_on_road_w,"on-road, street view, weighted"
+asthma_prescriptions,GSV_on_road_w,-0.038876637445219644,0.001969654806012478,0.39160437224223443,4808,GSV_on_road_w,"on-road, street view, weighted"
+opioids_prescriptions,Intercept,-1.214306433183765e-17,0.9999999999999992,0.28162125519864556,4808,GSV_on_road_w,"on-road, street view, weighted"
+opioids_prescriptions,white_percent,0.573312380127089,5.462904026860066e-208,0.28162125519864556,4808,GSV_on_road_w,"on-road, street view, weighted"
+opioids_prescriptions,median_age,0.09672553954055116,7.976867948675621e-06,0.28162125519864556,4808,GSV_on_road_w,"on-road, street view, weighted"
+opioids_prescriptions,IMD_deprivation_score,0.5857086789847493,1.5074613872336148e-248,0.28162125519864556,4808,GSV_on_road_w,"on-road, street view, weighted"
+opioids_prescriptions,building_density,0.044202257745138106,0.004914693556279257,0.28162125519864556,4808,GSV_on_road_w,"on-road, street view, weighted"
+opioids_prescriptions,GSV_on_road_w,-0.0017707403955666313,0.8984851411395536,0.28162125519864556,4808,GSV_on_road_w,"on-road, street view, weighted"
+total_prescriptions,Intercept,-7.806255641895632e-16,0.9999999999999514,0.2117494221633125,4808,GSV_on_road_w,"on-road, street view, weighted"
+total_prescriptions,white_percent,-0.07069994397520518,7.269450372587575e-05,0.2117494221633125,4808,GSV_on_road_w,"on-road, street view, weighted"
+total_prescriptions,median_age,0.24388553605406119,5.930181075512906e-31,0.2117494221633125,4808,GSV_on_road_w,"on-road, street view, weighted"
+total_prescriptions,IMD_deprivation_score,0.3332294108272804,2.5980109690094193e-81,0.2117494221633125,4808,GSV_on_road_w,"on-road, street view, weighted"
+total_prescriptions,building_density,-0.21649327357932233,1.0329032378338138e-37,0.2117494221633125,4808,GSV_on_road_w,"on-road, street view, weighted"
+total_prescriptions,GSV_on_road_w,-0.037040905590731976,0.006836386409954301,0.2117494221633125,4808,GSV_on_road_w,"on-road, street view, weighted"
+diabetes_prescriptions,Intercept,7.153023832973116e-17,0.9999999999999929,0.6907854827643164,4835,SAT_off_road,off-road
+diabetes_prescriptions,white_percent,-0.6677863010858177,0.0,0.6907854827643164,4835,SAT_off_road,off-road
+diabetes_prescriptions,median_age,0.15215364395453201,6.366524616641317e-34,0.6907854827643164,4835,SAT_off_road,off-road
+diabetes_prescriptions,IMD_deprivation_score,0.24401656773436375,1.3650883159789638e-119,0.6907854827643164,4835,SAT_off_road,off-road
+diabetes_prescriptions,building_density,-0.32168095193229096,1.0738779109789135e-185,0.6907854827643164,4835,SAT_off_road,off-road
+diabetes_prescriptions,SAT_off_road,-0.017106079778292385,0.03626690765516082,0.6907854827643164,4835,SAT_off_road,off-road
+hypertension_prescriptions,Intercept,-4.4159554485334596e-16,0.9999999999999606,0.6141930610221584,4835,SAT_off_road,off-road
+hypertension_prescriptions,white_percent,-0.001591374668256081,0.9079821823468078,0.6141930610221584,4835,SAT_off_road,off-road
+hypertension_prescriptions,median_age,0.4694300200138325,5.06071195253598e-170,0.6141930610221584,4835,SAT_off_road,off-road
+hypertension_prescriptions,IMD_deprivation_score,0.3190514330548254,9.78796295041434e-159,0.6141930610221584,4835,SAT_off_road,off-road
+hypertension_prescriptions,building_density,-0.4695307150557069,1.1129891564698585e-297,0.6141930610221584,4835,SAT_off_road,off-road
+hypertension_prescriptions,SAT_off_road,-0.03308317807109045,0.0007518552589639639,0.6141930610221584,4835,SAT_off_road,off-road
+asthma_prescriptions,Intercept,1.5704668468452532e-16,0.9999999999999889,0.3915056673898738,4835,SAT_off_road,off-road
+asthma_prescriptions,white_percent,0.19918748614929122,2.8200766009899994e-27,0.3915056673898738,4835,SAT_off_road,off-road
+asthma_prescriptions,median_age,0.27358635451873925,2.650226682185891e-28,0.3915056673898738,4835,SAT_off_road,off-road
+asthma_prescriptions,IMD_deprivation_score,0.4197578552025655,2.0036030559741068e-173,0.3915056673898738,4835,SAT_off_road,off-road
+asthma_prescriptions,building_density,-0.35884080018060993,2.107271823464877e-96,0.3915056673898738,4835,SAT_off_road,off-road
+asthma_prescriptions,SAT_off_road,-0.019160329276604708,0.10164731382696571,0.3915056673898738,4835,SAT_off_road,off-road
+opioids_prescriptions,Intercept,1.9613217300262775e-16,0.9999999999999872,0.2810027954118024,4835,SAT_off_road,off-road
+opioids_prescriptions,white_percent,0.5744094321303643,1.2769309138550772e-207,0.2810027954118024,4835,SAT_off_road,off-road
+opioids_prescriptions,median_age,0.09400574326750881,6.1403964729246165e-06,0.2810027954118024,4835,SAT_off_road,off-road
+opioids_prescriptions,IMD_deprivation_score,0.5841492330854003,1.1921214373715648e-251,0.2810027954118024,4835,SAT_off_road,off-road
+opioids_prescriptions,building_density,0.04489017282040844,0.0040299057436061336,0.2810027954118024,4835,SAT_off_road,off-road
+opioids_prescriptions,SAT_off_road,-0.01612050449004609,0.205329588222256,0.2810027954118024,4835,SAT_off_road,off-road
+total_prescriptions,Intercept,-2.9967348047499343e-16,0.9999999999999812,0.21166234680682328,4835,SAT_off_road,off-road
+total_prescriptions,white_percent,-0.07185149068241091,5.165164066114474e-05,0.21166234680682328,4835,SAT_off_road,off-road
+total_prescriptions,median_age,0.23448838584740897,6.656141574008478e-31,0.21166234680682328,4835,SAT_off_road,off-road
+total_prescriptions,IMD_deprivation_score,0.3355466581506208,1.1985754632903594e-84,0.21166234680682328,4835,SAT_off_road,off-road
+total_prescriptions,building_density,-0.22208485459391175,1.41865682554635e-41,0.21166234680682328,4835,SAT_off_road,off-road
+total_prescriptions,SAT_off_road,-0.006212914887829282,0.6811802644362703,0.21166234680682328,4835,SAT_off_road,off-road

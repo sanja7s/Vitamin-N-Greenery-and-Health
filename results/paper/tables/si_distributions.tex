@@ -1,0 +1,33 @@
+\begin{table}[!hbt]
+\caption{Distributions and statistics across the 632 wards for the variables used in our models. Building density is log-transformed. All variables were standardized before being fed into the OLS models.}
+\label{tab:variable_distrbutions}
+\centering
+\begin{tabular}{llllll}
+Controls & Distribution & Min & Median & Max & Std \\ \midrule
+median age & \includegraphics[height=1.3em]{figures/dist_median age.pdf} & 25.8 & 33.5 & 45.5 & 4.03 \\
+deprivation & \includegraphics[height=1.3em]{figures/dist_IMD deprivation score.pdf} & 0.0759 & 0.193 & 0.327 & 0.0523 \\
+White \% & \includegraphics[height=1.3em]{figures/dist_white percent.pdf} & 0.0626 & 0.638 & 0.959 & 0.189 \\
+build.\ dens. & \includegraphics[height=1.3em]{figures/dist_building_density.pdf} & 1.35 & 1.74 & 2.71 & 0.283 \\
+\addlinespace[1em]
+Prescriptions (per patient per year) & Distribution & Min & Median & Max & Std \\ \midrule
+diabetes & \includegraphics[height=1.3em]{figures/dist_diabetes_rx.pdf} & 17.3 & 48.6 & 116 & 16.6 \\
+hypertension & \includegraphics[height=1.3em]{figures/dist_hypertension_rx.pdf} & 39.4 & 84.5 & 133 & 18.9 \\
+asthma & \includegraphics[height=1.3em]{figures/dist_asthma_rx.pdf} & 6.6 & 14 & 22.8 & 2.5 \\
+opioids & \includegraphics[height=1.3em]{figures/dist_opioids_rx.pdf} & 5.52 & 13.5 & 32 & 4.45 \\
+total & \includegraphics[height=1.3em]{figures/dist_total_rx.pdf} & 647 & 1,257 & 2,440 & 242 \\
+\addlinespace[1em]
+Greenery (\% green) & Distribution & Min & Median & Max & Std \\ \midrule
+NDVI & \includegraphics[height=1.3em]{figures/dist_SAT_NDVI.pdf} & 5.73 & 40.7 & 91.3 & 15.4 \\
+on-road, aerial & \includegraphics[height=1.3em]{figures/dist_SAT_on_road_share_u.pdf} & 4.25 & 21.4 & 71.7 & 7.76 \\
+on-road, aerial, weighted & \includegraphics[height=1.3em]{figures/dist_SAT_on_road_share_w.pdf} & 4.22 & 19.3 & 53.3 & 7.06 \\
+on-road, street view & \includegraphics[height=1.3em]{figures/dist_GSV_on_road_u.pdf} & 2.39 & 7.34 & 14.9 & 2.1 \\
+on-road, street view, weighted & \includegraphics[height=1.3em]{figures/dist_GSV_on_road_w.pdf} & 2.3 & 7.08 & 14.1 & 2.08 \\
+off-road & \includegraphics[height=1.3em]{figures/dist_SAT_off_road.pdf} & 0 & 4.72 & 60.4 & 8.93 \\
+\addlinespace[1em]
+Access to greenery (\% of people) & Distribution & Min & Median & Max & Std \\ \midrule
+WHO & \includegraphics[height=1.3em]{figures/dist_WHO.pdf} & 0 & 65.8 & 99.2 & 19.4 \\
+ESA WHO & \includegraphics[height=1.3em]{figures/dist_ESA_WHO_exposure.pdf} & 73 & 95.4 & 100 & 3.58 \\
+NE & \includegraphics[height=1.3em]{figures/dist_Natural_England1.pdf} & 0 & 45.7 & 94 & 22.1 \\
+\addlinespace[1em]
+\end{tabular}
+\end{table}

@@ -1,0 +1,15 @@
+{
+ "measure": "GSV_on_road_w",
+ "n": 631,
+ "bandwidths": {
+  "intercept": 19.0,
+  "white_percent": 42.0,
+  "median_age": 32.0,
+  "IMD_deprivation_score": 630.0,
+  "building_density": 630.0,
+  "GSV_on_road_w": 630.0
+ },
+ "crit_t": 2.0706427196517216,
+ "adj_r2": 0.9398752666121402,
+ "aicc": 234.25396105069314
+}

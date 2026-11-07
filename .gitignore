@@ -1,0 +1,11 @@
+.DS_Store
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Inputs not shipped (see README): aerial greenery tiles (~13 GB)
+data/raw_data/green_cover_tiles/
+# Caches written by the pipeline
+data/greenery_metrics/*_chunks/
+data/greenery_metrics/*_tiles/
+data/raw_data/gp_registrations/gp-reg-patients-all-lsoa_long.csv

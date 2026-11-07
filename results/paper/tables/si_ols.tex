@@ -1,0 +1,52 @@
+\begin{table}[hbt!]
+\caption{\textbf{OLS with the controls only.} Standardized coefficients; bold and shaded: $p<0.05$ (HC3 standard errors).}\label{ols_baseline}
+\centering\footnotesize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{l*{10}{l}}
+\toprule
+ & \multicolumn{5}{c}{Wards (632)} & \multicolumn{5}{c}{LSOAs (4,835)} \\
+\cmidrule(lr){2-6}\cmidrule(lr){7-11}
+ & diabetes & hypert. & asthma & opioids & total & diabetes & hypert. & asthma & opioids & total \\
+\midrule
+median age & \cellcolor{poscell}\textbf{\phantom{-}0.278} & \cellcolor{poscell}\textbf{\phantom{-}0.681} & \cellcolor{poscell}\textbf{\phantom{-}0.403} & \cellcolor{poscell}\textbf{\phantom{-}0.217} & \cellcolor{poscell}\textbf{\phantom{-}0.422} & \cellcolor{poscell}\textbf{\phantom{-}0.152} & \cellcolor{poscell}\textbf{\phantom{-}0.469} & \cellcolor{poscell}\textbf{\phantom{-}0.273} & \cellcolor{poscell}\textbf{\phantom{-}0.094} & \cellcolor{poscell}\textbf{\phantom{-}0.234} \\
+deprivation & \cellcolor{poscell}\textbf{\phantom{-}0.377} & \cellcolor{poscell}\textbf{\phantom{-}0.461} & \cellcolor{poscell}\textbf{\phantom{-}0.572} & \cellcolor{poscell}\textbf{\phantom{-}0.797} & \cellcolor{poscell}\textbf{\phantom{-}0.529} & \cellcolor{poscell}\textbf{\phantom{-}0.244} & \cellcolor{poscell}\textbf{\phantom{-}0.318} & \cellcolor{poscell}\textbf{\phantom{-}0.419} & \cellcolor{poscell}\textbf{\phantom{-}0.584} & \cellcolor{poscell}\textbf{\phantom{-}0.335} \\
+White \% & \cellcolor{negcell}\textbf{-0.687} & -0.047 & \cellcolor{poscell}\textbf{\phantom{-}0.236} & \cellcolor{poscell}\textbf{\phantom{-}0.691} & \cellcolor{negcell}\textbf{-0.096} & \cellcolor{negcell}\textbf{-0.669} & -0.004 & \cellcolor{poscell}\textbf{\phantom{-}0.198} & \cellcolor{poscell}\textbf{\phantom{-}0.573} & \cellcolor{negcell}\textbf{-0.072} \\
+build.\ dens. & \cellcolor{negcell}\textbf{-0.244} & \cellcolor{negcell}\textbf{-0.398} & \cellcolor{negcell}\textbf{-0.338} & \cellcolor{poscell}\textbf{\phantom{-}0.150} & \cellcolor{negcell}\textbf{-0.142} & \cellcolor{negcell}\textbf{-0.322} & \cellcolor{negcell}\textbf{-0.469} & \cellcolor{negcell}\textbf{-0.359} & \cellcolor{poscell}\textbf{\phantom{-}0.045} & \cellcolor{negcell}\textbf{-0.222} \\
+\midrule
+Adj.\ $R^2$ & 0.80 & 0.79 & 0.54 & 0.41 & 0.34 & 0.69 & 0.61 & 0.39 & 0.28 & 0.21 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[hbt!]
+\caption{\textbf{OLS with the controls and one greenery measure at a time.} Standardized coefficient of the greenery measure; each cell is a separate model. Bold and shaded: $p<0.05$ (HC3 standard errors).}\label{ols_greenery}
+\centering\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{tabular}{l*{5}{l}}
+\toprule
+\textbf{Wards (632)} & diabetes & hypert. & asthma & opioids & total \\
+\midrule
+NDVI & -0.020 & \phantom{-}0.004 & -0.009 & \phantom{-}0.035 & \cellcolor{poscell}\textbf{\phantom{-}0.132} \\
+WHO & -0.031 & -0.010 & \phantom{-}0.012 & \cellcolor{poscell}\textbf{\phantom{-}0.078} & -0.024 \\
+ESA WHO & -0.016 & -0.021 & -0.015 & \phantom{-}0.009 & -0.024 \\
+NE & -0.011 & -0.008 & -0.001 & \phantom{-}0.045 & -0.016 \\
+\midrule
+on-road, aerial & \cellcolor{negcell}\textbf{-0.067} & \cellcolor{negcell}\textbf{-0.047} & -0.031 & \phantom{-}0.026 & \phantom{-}0.054 \\
+on-road, aerial, weighted & \cellcolor{negcell}\textbf{-0.084} & \cellcolor{negcell}\textbf{-0.068} & -0.052 & \phantom{-}0.030 & \phantom{-}0.019 \\
+on-road, street view & \cellcolor{negcell}\textbf{-0.120} & \cellcolor{negcell}\textbf{-0.065} & -0.047 & \phantom{-}0.037 & -0.007 \\
+on-road, street view, weighted & \cellcolor{negcell}\textbf{-0.127} & \cellcolor{negcell}\textbf{-0.071} & -0.043 & \phantom{-}0.052 & -0.018 \\
+off-road & \cellcolor{negcell}\textbf{-0.058} & \cellcolor{negcell}\textbf{-0.073} & \cellcolor{negcell}\textbf{-0.047} & -0.056 & -0.014 \\
+\midrule[\heavyrulewidth]
+\textbf{LSOAs (4,835)} & diabetes & hypert. & asthma & opioids & total \\
+\midrule
+NDVI & \cellcolor{negcell}\textbf{-0.024} & \phantom{-}0.011 & -0.000 & \phantom{-}0.026 & \cellcolor{poscell}\textbf{\phantom{-}0.058} \\
+WHO & -0.009 & \phantom{-}0.004 & \phantom{-}0.014 & \cellcolor{poscell}\textbf{\phantom{-}0.043} & -0.005 \\
+ESA WHO & -0.012 & \cellcolor{negcell}\textbf{-0.026} & -0.008 & \phantom{-}0.010 & -0.007 \\
+NE & \cellcolor{poscell}\textbf{\phantom{-}0.017} & \cellcolor{poscell}\textbf{\phantom{-}0.022} & \cellcolor{poscell}\textbf{\phantom{-}0.024} & \cellcolor{poscell}\textbf{\phantom{-}0.031} & \phantom{-}0.015 \\
+\midrule
+on-road, aerial & \cellcolor{negcell}\textbf{-0.095} & \cellcolor{negcell}\textbf{-0.081} & \cellcolor{negcell}\textbf{-0.059} & -0.015 & -0.018 \\
+on-road, aerial, weighted & \cellcolor{negcell}\textbf{-0.100} & \cellcolor{negcell}\textbf{-0.083} & \cellcolor{negcell}\textbf{-0.061} & -0.018 & \cellcolor{negcell}\textbf{-0.029} \\
+on-road, street view & \cellcolor{negcell}\textbf{-0.130} & \cellcolor{negcell}\textbf{-0.058} & \cellcolor{negcell}\textbf{-0.050} & -0.016 & \cellcolor{negcell}\textbf{-0.041} \\
+on-road, street view, weighted & \cellcolor{negcell}\textbf{-0.126} & \cellcolor{negcell}\textbf{-0.054} & \cellcolor{negcell}\textbf{-0.039} & -0.002 & \cellcolor{negcell}\textbf{-0.037} \\
+off-road & \cellcolor{negcell}\textbf{-0.017} & \cellcolor{negcell}\textbf{-0.033} & -0.019 & -0.016 & -0.006 \\
+\bottomrule
+\end{tabular}
+\end{table}
