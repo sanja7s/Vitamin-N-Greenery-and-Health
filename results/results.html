@@ -117,7 +117,7 @@ table.sav tr.gsep td { border-top: 2px solid var(--axis); }
 <tr><td class="grp" rowspan="3">Our measures</td><td>On-road, aerial (unweighted, weighted)</td><td>Green share of a 10 m strip on each side of every road</td><td>London Green Cover (aerial images), OpenStreetMap roads, space syntax choice</td></tr>
 <tr><td>On-road, street view (unweighted, weighted)</td><td>Share of trees in street view images along roads</td><td>About 100,000 street view images, space syntax choice</td></tr>
 <tr><td>Off-road</td><td>Green inside public parks and gardens, outside the road strips, as a share of the area</td><td>London Green Cover, OpenStreetMap parks</td></tr>
-<tr><td class="grp" rowspan="2">Official measures</td><td>NDVI</td><td>All greenery seen from above, public and private, as a share of the area</td><td>London Green Cover</td></tr>
+<tr><td class="grp" rowspan="2">Widely used measures</td><td>NDVI</td><td>All greenery seen from above, public and private, as a share of the area</td><td>London Green Cover</td></tr>
 <tr><td>WHO, ESA WHO, NE</td><td>Share of residents within reach of green space, by each target's distance rule</td><td>Battiston &amp; Schifanella (2024)</td></tr>
 </tbody></table>
 </div>
@@ -190,7 +190,7 @@ const DATA = {"n":{"wards":632,"lsoas":4835},"colours":{"teal":"#1a9479","blue":
 const OUTCOMES = ["diabetes","hypertension","asthma","opioids","total"];
 const SHORT = {diabetes: "diabetes", hypertension: "hypert.", asthma: "asthma", opioids: "opioids", total: "total"};
 const GROUPS = [
-  ["Official measures", [["NDVI", "NDVI"], ["WHO", "WHO"], ["ESA WHO", "ESA WHO"], ["NE", "NE"]]],
+  ["Widely used measures", [["NDVI", "NDVI"], ["WHO", "WHO"], ["ESA WHO", "ESA WHO"], ["NE", "NE"]]],
   ["Our measures", [["on-road, aerial", "on-road, aerial"], ["on-road, aerial, weighted", "on-road, aerial, weighted"],
                     ["on-road, street view", "on-road, street view"], ["on-road, street view, weighted", "on-road, street view, weighted"],
                     ["off-road", "off-road"]]]

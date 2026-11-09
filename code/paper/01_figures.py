@@ -4,7 +4,7 @@ Inputs : data/data_analysis_wards7s.csv, London 2018 ward shapefile (data/raw_da
 Outputs: results/paper/figures/: box plots of prescribing (Fig. 1) and of all greenery measures (Fig. 2),
          one ward map per outcome and per greenery measure (standardised scores)
 Run    : python 01_figures.py
-Notes  : colours from palette.py (teal ours, blue official, magenta prescribing).
+Notes  : colours from palette.py (teal ours, blue widely used, magenta prescribing).
 """
 from pathlib import Path
 

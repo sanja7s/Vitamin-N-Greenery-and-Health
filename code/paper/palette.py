@@ -1,5 +1,5 @@
 """One colour scheme for every figure and table of the paper and SI.
-Teal = our greenery measures, blue = official greenery measures (NDVI, WHO, ESA WHO, NE), magenta = prescribing.
+Teal = our greenery measures, blue = widely used greenery measures (NDVI, WHO, ESA WHO, NE), magenta = prescribing.
 Signs (tables, correlation matrices, MGWR): blue = negative, red = positive, light grey midpoint.
 Checked with the dataviz palette validator: the three hues pass lightness, chroma and normal-vision separation.
 """

@@ -17,7 +17,7 @@ OUT = REPO / "results" / "paper" / "tables"
 OUTCOMES = ["diabetes", "hypertension", "asthma", "opioids", "total"]
 HEAD = ["diabetes", "hypert.", "asthma", "opioids", "total"]
 GROUPS = [
-    ("Official measures", [("SAT_NDVI", "NDVI"), ("WHO", "WHO"), ("ESA_WHO_exposure", "ESA WHO"), ("Natural_England1", "NE")]),
+    ("Widely used measures", [("SAT_NDVI", "NDVI"), ("WHO", "WHO"), ("ESA_WHO_exposure", "ESA WHO"), ("Natural_England1", "NE")]),
     ("Our measures", [("SAT_on_road_share_u", "on-road, aerial"), ("SAT_on_road_share_w", "on-road, aerial, weighted"),
                       ("GSV_on_road_u", "on-road, street view"), ("GSV_on_road_w", "on-road, street view, weighted"),
                       ("SAT_off_road", "off-road")]),
@@ -37,7 +37,8 @@ MODEL = {  # file stem, effect column, label, caption text
     "psm": ("psm_{lv}", "ATE_pct", "tab_all", "PSM",
             r"\textbf{Associations between greenery measures and prescription rates: propensity score matching (PSM).} "
             r"Each cell shows the average treatment effect (ATE): the difference in prescribing between areas above and"
-            r" below the citywide median of a measure, as \% of the below-median mean, with its standard error."),
+            r" below the citywide median of a measure, as \% of the below-median mean, with its standard error."
+            r" For on-road greenery in street view, the citywide median is 7.3\% trees for wards and 7.1\% for LSOAs (7.1\% and 6.9\% when weighted)."),
     "dml": ("dml_{lv}", "Effect_pct", "tab_dml", "Double ML",
             r"\textbf{Associations between greenery measures and prescription rates: double machine learning (DML).}"
             r" Each cell shows the change in prescribing for one standard deviation more of a measure, as \% of the mean"

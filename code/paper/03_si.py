@@ -32,7 +32,7 @@ MEASURES = [  # model name, label, column in the analysis tables, x100 for displ
     ("GSV_on_road_u", "on-road, street view", "GSV_on_road_u", 100),
     ("GSV_on_road_w", "on-road, street view, weighted", "GSV_on_road_w", 100),
     ("SAT_off_road", "off-road", "SAT_off_road", 100)]
-ACCESS = {"WHO", "ESA_WHO_exposure", "Natural_England1"}   # official targets: share of residents with access, not share green
+ACCESS = {"WHO", "ESA_WHO_exposure", "Natural_England1"}   # WHO and NE targets: share of residents with access, not share green
 
 
 def coef_cell(c: float, p: float) -> str:

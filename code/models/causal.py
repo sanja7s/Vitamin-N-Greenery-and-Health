@@ -42,7 +42,7 @@ OUTCOMES: tuple[str, ...] = (
     "total_prescriptions",
 )
 
-# (column, label): the four official measures, then our five (Tables 1 and 2)
+# (column, label): the four widely used measures, then our five (Tables 1 and 2)
 TREATMENTS: tuple[tuple[str, str], ...] = (
     ("SAT_NDVI", "NDVI"),
     ("WHO", "WHO"),

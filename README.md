@@ -6,7 +6,7 @@ Code and data for:
 > *Vitamin N: Benefits of Different Forms of Public Greenery for Urban Health.*
 > [arXiv:2508.12998](https://arxiv.org/abs/2508.12998)
 
-The paper links greenery in London to NHS prescribing in 2016, for 632 wards and 4,835 LSOAs. It proposes two kinds of public greenery, **on-road** (greenery seen along streets) and **off-road** (public parks and gardens), and compares them with four official measures (NDVI, WHO, ESA WHO, Natural England). Outcomes are the yearly quantity of drugs per registered patient for diabetes, hypertension, asthma and opioids, and all prescribing.
+The paper links greenery in London to NHS prescribing in 2016, for 632 wards and 4,835 LSOAs. It proposes two kinds of public greenery, **on-road** (greenery seen along streets) and **off-road** (public parks and gardens), and compares them with four widely used measures (NDVI, WHO, ESA WHO, Natural England). Outcomes are the yearly quantity of drugs per registered patient for diabetes, hypertension, asthma and opioids, and all prescribing.
 
 **[results/results.html](results/results.html)** is an interactive summary of all results (download it and open it in a browser): the measures, the main models for wards and LSOAs, the cost estimate, the check against diagnoses, and maps.
 
@@ -26,7 +26,7 @@ code/
 data/
   raw_data/         inputs (sources below)
   prescriptions/    2016 prescribing per LSOA and ward, per condition (output of prescriptions/02)
-  greenery_metrics/ greenery per road segment, LSOA and ward (output of greenery/01-04), official measures
+  greenery_metrics/ greenery per road segment, LSOA and ward (output of greenery/01-04), widely used measures (WHO, ESA WHO, NE)
   data_analysis_{wards,lsoas}7s.csv   the tables every model reads
 results/
   models/           model results (CSV)
@@ -85,7 +85,7 @@ England-wide download that is not part of this repository; its result is include
 
 ## Citation
 
-If you use this code or data, please cite the paper (arXiv:2508.12998) and, for the official accessibility
+If you use this code or data, please cite the paper (arXiv:2508.12998) and, for the WHO, ESA WHO and NE accessibility
 measures, Battiston & Schifanella (2024).
 
 ## Licence
